@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TG Services | Home Inspections</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="nav">
+
+<h1>TG Services</h1>
+
+<div>
+
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-box">
+
+<h2>Inspection Services Tailored to Your Needs</h2>
+
+<p>Professional home inspections you can trust.</p>
+
+<a href="services.html" class="btn">View Services</a>
+
+</div>
+
+</section>
+
+<section class="content">
+
+<h2>Why Choose TG Services?</h2>
+
+<ul>
+
+<li>✔ Certified Professional Inspector</li>
+<li>✔ Fast Report Delivery</li>
+<li>✔ Serving Maryland & Surrounding Areas</li>
+
+</ul>
+
+</section>
+
+<footer>
+
+<p>© 2026 TG Services</p>
+
+</footer>
+
+</body>
+</html>
