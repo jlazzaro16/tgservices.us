@@ -10,6 +10,16 @@ color:#222;
 
 
 /* NAVBAR */
+/* DESKTOP NAV */
+
+#navMenu{
+display:flex;
+align-items:center;
+}
+
+.menu-toggle{
+display:none;
+}
 
 .nav{
 position:fixed;
@@ -168,4 +178,37 @@ font-size:18px;
 color:#555;
 
 }
+
+/* MOBILE NAV */
+
+@media (max-width: 768px){
+
+/* show hamburger */
+.menu-toggle{
+display:block;
+font-size:28px;
+cursor:pointer;
+}
+
+/* hide menu initially */
+#navMenu{
+display:none;
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:white;
+flex-direction:column;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+/* stacked buttons */
+#navMenu a{
+padding:18px;
+margin:0;
+border-bottom:1px solid #eee;
+}
+
+}
+
 
