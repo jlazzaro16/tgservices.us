@@ -1,105 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TG Services | Home Inspection</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>TG Services | Home Inspection</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 
 <body>
 
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav-container">
 
-<!-- NAVBAR -->
-<header class="nav">
+      <div class="logo">
+        <a href="index.html">
+          <img src="tg-logo-black-screens.png" alt="TG Services">
+        </a>
+      </div>
 
-<div class="nav-container">
+      <!-- hamburger icon (mobile only via CSS) -->
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
 
-<div class="logo">
-<a href="index.html">
-<img src="tg-logo-black-screens.png" alt="TG Services">
-</a>
-</div>
+      <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" class="nav-button">Schedule Inspection</a>
+      </nav>
 
-<!-- hamburger icon -->
-<div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
 
-<nav id="navMenu">
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
 
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
-<a href="#" class="nav-button">Schedule Inspection</a>
+      <h1>Professional Home Inspection Services</h1>
 
-</nav>
+      <p>Protect your investment with trusted, detailed inspection reports.</p>
 
-</div>
+      <div class="hero-buttons">
+        <a href="services.html" class="button-primary">View Services</a>
+        <a href="contact.html" class="button-secondary">Get Quote</a>
+      </div>
 
-<!-- HERO SECTION -->
+    </div>
+  </section>
 
+  <!-- TRUST SECTION -->
+  <section class="trust">
+    <h2>Trusted. Reliable. Professional.</h2>
+    <p>Serving homeowners, buyers, and real estate professionals with accurate and thorough inspections.</p>
+  </section>
 
-<section class="hero">
-
-<div class="hero-overlay"></div>
-
-<div class="hero-content">
-
-<h1>Professional Home Inspection Services</h1>
-
-<p>
-
-Protect your investment with trusted, detailed inspection reports.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="services.html" class="button-primary">
-View Services
-</a>
-
-<a href="contact.html" class="button-secondary">
-Get Quote
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- TRUST SECTION -->
-
-
-<section class="trust">
-
-<h2>Trusted. Reliable. Professional.</h2>
-
-<p>
-
-Serving homeowners, buyers, and real estate professionals with accurate and thorough inspections.
-
-</p>
-
-</section>
+  <!-- Mobile menu toggle -->
+  <script>
+    function toggleMenu(){
+      const menu = document.getElementById("navMenu");
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
+      }
+    }
+  </script>
 
 </body>
-
 </html>
-
-
-
-
-
-
-
-
