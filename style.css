@@ -386,28 +386,3 @@ body{
   text-align:center;
   padding: 22px 14px;
 }
-
-/* =========================
-   RESPONSIVE (MOBILE)
-   ========================= */
-
-@media (max-width: 900px){
-  .services-grid{
-    grid-template-columns: 1fr;
-  }
-
-  .pricing-split{
-    grid-template-columns: 1fr;
-  }
-
-  .pricing-left,
-  .pricing-right{
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .pricing-left{
-    margin-bottom: 10px;
-  }
-}
-
