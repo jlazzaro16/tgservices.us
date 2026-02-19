@@ -230,13 +230,11 @@ body{
     font-size:18px;
   }
 }
-/* =========================
-   SERVICES PAGE STYLES
-   ========================= */
+/* ===== SERVICES PAGE ===== */
 
 .page-hero{
-  background: #e6dfcf;
-  padding: 70px 20px 40px 20px;
+  background:#e6dfcf;
+  padding: 40px 20px 30px;
 }
 
 .page-hero-inner{
@@ -245,25 +243,24 @@ body{
 }
 
 .page-hero h1{
-  font-size: 44px;
-  margin: 0 0 10px 0;
+  font-size:44px;
+  margin:0 0 10px;
   color:#1e2a20;
 }
 
 .page-hero p{
-  font-size: 18px;
-  margin: 0 0 22px 0;
+  font-size:18px;
+  margin:0 0 18px;
   color:#3b3b3b;
 }
 
-/* services cards */
 .services-wrap{
   background:#e6dfcf;
-  padding: 20px 20px 60px 20px;
+  padding: 10px 20px 60px;
 }
 
 .services-grid{
-  max-width: 1100px;
+  max-width:1100px;
   margin: 0 auto;
   display:grid;
   grid-template-columns: repeat(3, 1fr);
@@ -278,52 +275,48 @@ body{
 }
 
 .service-card h3{
-  margin: 0 0 10px 0;
+  margin:0 0 10px;
   color:#2c3b2d;
 }
 
 .service-card p{
-  margin: 0 0 12px 0;
+  margin:0 0 12px;
   color:#444;
-  line-height: 1.5;
+  line-height:1.5;
 }
 
 .service-card ul{
-  margin: 0;
-  padding-left: 18px;
+  margin:0;
+  padding-left:18px;
   color:#444;
 }
 
 .service-card li{
-  margin: 8px 0;
+  margin:8px 0;
 }
 
-/* pricing split (mockup vibe) */
 .pricing-split{
+  background:#e6dfcf;
+  padding: 60px 20px;
   display:grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
-  padding: 60px 20px;
-  background:#e6dfcf;
 }
 
 .pricing-left{
-  max-width: 540px;
-  margin-left:auto;
-  margin-right: 18px;
   padding: 28px;
   background: linear-gradient(180deg, rgba(44,59,45,.95), rgba(44,59,45,.85));
   color:white;
 }
 
 .pricing-left h2{
-  margin: 0 0 12px 0;
-  font-size: 28px;
+  margin:0 0 12px;
+  font-size:28px;
 }
 
 .pricing-left p{
-  margin: 0 0 18px 0;
-  line-height: 1.6;
+  margin:0 0 18px;
+  line-height:1.6;
   color: rgba(255,255,255,.9);
 }
 
@@ -333,17 +326,10 @@ body{
   flex-wrap: wrap;
 }
 
-.pricing-right{
-  max-width: 540px;
-  margin-right:auto;
-  margin-left: 18px;
-}
-
-/* table style (clean, premium) */
 .pricing-table{
   width:100%;
   border-collapse: collapse;
-  background: rgba(255,255,255,.85);
+  background: rgba(255,255,255,.9);
   border: 1px solid rgba(0,0,0,.12);
   box-shadow: 0 10px 25px rgba(0,0,0,.08);
 }
@@ -351,8 +337,8 @@ body{
 .pricing-table th{
   background:#303030;
   color:white;
-  text-align:left;
   padding: 16px;
+  text-align:left;
   font-size: 15px;
 }
 
@@ -362,27 +348,24 @@ body{
   color:#222;
 }
 
-.pricing-table th:nth-child(1),
-.pricing-table td:nth-child(1){
-  width:65%;
-}
-
 .pricing-table th:nth-child(2),
 .pricing-table td:nth-child(2){
-  width:35%;
   text-align:right;
   font-weight:600;
 }
 
-/* subtle fade rows */
 .pricing-table tbody tr:nth-child(even){
   background: rgba(0,0,0,.04);
 }
 
-/* footer */
 .site-footer{
   background:#2c3b2d;
   color:white;
   text-align:center;
   padding: 22px 14px;
+}
+
+@media (max-width: 900px){
+  .services-grid{ grid-template-columns: 1fr; }
+  .pricing-split{ grid-template-columns: 1fr; }
 }
