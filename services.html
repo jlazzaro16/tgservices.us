@@ -1,157 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>TG Services | Services</title>
 
-<style>
-
-body{
-
-margin:0;
-font-family:Arial;
-background:#e6dfcf;
-
-}
-
-
-/* CONTAINER */
-
-.container{
-
-display:flex;
-min-height:100vh;
-
-}
-
-
-/* LEFT PANEL */
-
-.left{
-
-flex:1;
-
-background:
-linear-gradient(
-180deg,
-rgba(44,59,45,.95),
-rgba(44,59,45,.85)
-);
-
-color:white;
-
-padding:60px;
-
-}
-
-
-.left h1{
-
-font-size:42px;
-margin-bottom:20px;
-
-}
-
-
-
-/* RIGHT PANEL */
-
-.right{
-
-flex:1;
-
-padding:60px;
-
-}
-
-
-/* TABLE */
-
-table{
-
-width:100%;
-border-collapse:collapse;
-
-box-shadow:
-0 0 0 1px rgba(0,0,0,.2);
-
-}
-
-
-th{
-
-background:#303030;
-color:white;
-padding:18px;
-text-align:left;
-
-}
-
-
-td{
-
-padding:18px;
-
-}
-
-
-/* COLUMN WIDTH */
-
-td:first-child,
-th:first-child{
-
-width:65%;
-
-}
-
-
-td:last-child,
-th:last-child{
-
-width:35%;
-text-align:center;
-
-}
-
-
-
-/* FADE ROW EFFECT */
-
-tr:nth-child(odd) td{
-
-background:rgba(0,0,0,.35);
-color:white;
-
-}
-
-
-tr:nth-child(even) td{
-
-background:rgba(0,0,0,.15);
-color:white;
-
-}
-
-
-</style>
+<title>Services</title>
+<link rel="stylesheet" href="style.css">
 
 </head>
-
 <body>
 
 
+<header>
 
-<div class="container">
+<div class="nav">
+
+<h2>TG Services</h2>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+</header>
 
 
 
-<div class="left">
+<section class="split">
+
+
+<div class="left-panel">
 
 <h1>Inspection Services</h1>
 
 <p>
 
-We offer professional inspection services to ensure your home is safe and secure.
+We provide professional inspection services with detailed reporting.
 
 </p>
 
@@ -159,12 +46,10 @@ We offer professional inspection services to ensure your home is safe and secure
 
 
 
-
-<div class="right">
+<div class="right-panel">
 
 
 <table>
-
 
 <tr>
 
@@ -175,34 +60,28 @@ We offer professional inspection services to ensure your home is safe and secure
 
 
 <tr><td>Radon</td><td>$125</td></tr>
-
 <tr><td>Termite</td><td>$75</td></tr>
-
-<tr><td>Mold (Visual)</td><td>Included</td></tr>
-
-<tr><td>Mold (Full)</td><td>$300</td></tr>
-
+<tr><td>Mold Visual</td><td>Included</td></tr>
+<tr><td>Mold Air</td><td>$300</td></tr>
 <tr><td>Sewer Scope</td><td>$150</td></tr>
-
-<tr><td>Water Testing</td><td>$150</td></tr>
-
-<tr><td>Lead Paint</td><td>$175</td></tr>
-
+<tr><td>Water Test</td><td>$150</td></tr>
+<tr><td>Lead</td><td>$175</td></tr>
 <tr><td>Asbestos</td><td>$225</td></tr>
-
-<tr><td>Additional Structure</td><td>$75</td></tr>
-
 
 </table>
 
 
-
 </div>
 
 
+</section>
 
-</div>
 
+<footer>
+
+© TG Services
+
+</footer>
 
 
 </body>
