@@ -373,17 +373,6 @@ font-size:18px;
   background:rgba(44,59,45,.06);
 }
 
-/* responsive */
-@media(max-width:900px){
-  .services-grid{
-    grid-template-columns:1fr;
-  }
-
-  .pricing-split{
-    grid-template-columns:1fr;
-  }
-}
-
 /* =========================
    RESPONSIVE IMPROVEMENTS
    ========================= */
@@ -416,4 +405,5 @@ font-size:18px;
     padding: 22px;
   }
 }
+
 
