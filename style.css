@@ -1,7 +1,7 @@
 /* =========================
- TG SERVICES — FULL CSS
- Modern nav + hero + mobile dropdown
- ========================= */
+  TG SERVICES — FULL CSS
+  Modern nav + hero + mobile dropdown
+  ========================= */
 
 body{
 margin:0;
@@ -11,8 +11,8 @@ color:#222;
 }
 
 /* =========================
- NAVBAR (DESKTOP DEFAULT)
- ========================= */
+  NAVBAR (DESKTOP DEFAULT)
+  ========================= */
 
 .nav{
 position: fixed;
@@ -82,8 +82,8 @@ color:#2c3b2d;
 }
 
 /* =========================
- HERO
- ========================= */
+  HERO
+  ========================= */
 
 .hero{
 position:relative;
@@ -146,8 +146,8 @@ color:black;
 }
 
 /* =========================
- TRUST SECTION
- ========================= */
+  TRUST SECTION
+  ========================= */
 
 .trust{
 padding:100px 20px;
@@ -166,8 +166,8 @@ margin:0;
 }
 
 /* =========================
- MOBILE NAV (Dropdown only)
- ========================= */
+  MOBILE NAV (Dropdown only)
+  ========================= */
 
 @media (max-width: 768px){
 
@@ -197,9 +197,7 @@ align-items:stretch;
 gap:0;
 box-shadow:0 4px 12px rgba(0,0,0,.1);
 }
-#navMenu.open{
-  display:flex;
-}
+
 /* stacked links */
 #navMenu a{
 padding:16px 18px;
@@ -238,11 +236,13 @@ font-size:18px;
    Paste at bottom of style.css
    ========================= */
 
-/* Page background + consistent section padding */
+.page-hero{
+/* Background + overall spacing */
 .page-hero,
 .services-wrap,
 .pricing-split{
-  background:#e6dfcf;
+background:#e6dfcf;
+  padding: 40px 20px 30px;
 }
 
 /* Make services page content feel premium + centered */
@@ -256,7 +256,6 @@ font-size:18px;
   box-shadow: 0 14px 40px rgba(0,0,0,.06);
   backdrop-filter: blur(6px);
 }
-
 .services-grid,
 .pricing-split{
   max-width: 1120px;
@@ -267,10 +266,11 @@ font-size:18px;
 /* HERO: cleaner hierarchy */
 .page-hero{
   padding: 56px 20px 34px;
-  scroll-margin-top: 100px;
 }
 
 .page-hero h1{
+  font-size:44px;
+  margin:0 0 10px;
   color:#1e2a20;
   font-size: 52px;
   line-height: 1.05;
@@ -279,6 +279,8 @@ font-size:18px;
 }
 
 .page-hero p{
+  font-size:18px;
+  margin:0 0 18px;
   color:#3b3b3b;
   font-size: 18px;
   line-height: 1.6;
@@ -295,6 +297,8 @@ font-size:18px;
 
 /* SERVICES GRID: premium cards */
 .services-wrap{
+  background:#e6dfcf;
+  padding: 10px 20px 60px;
   padding: 10px 20px 70px;
 }
 
@@ -303,17 +307,22 @@ font-size:18px;
   margin: 0 auto;
   display:grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
   gap: 22px;
-  align-items: stretch;
+   align-items: stretch;
 }
 
 .service-card{
-  height: 100%;
+  background: rgba(255,255,255,.75);
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 8px 22px rgba(0,0,0,.06);
+  padding: 22px;
+  border-radius: 14px;
+   height: 100%;
   background: rgba(255,255,255,.72);
   border: 1px solid rgba(0,0,0,.07);
   box-shadow: 0 12px 34px rgba(0,0,0,.08);
   padding: 26px;
-  border-radius: 14px;
   transition: transform .18s ease, box-shadow .18s ease;
   backdrop-filter: blur(6px);
 }
@@ -324,6 +333,7 @@ font-size:18px;
 }
 
 .service-card h3{
+  margin:0 0 10px;
   color:#2c3b2d;
   font-size: 18px;
   letter-spacing: -0.01em;
@@ -331,51 +341,68 @@ font-size:18px;
 }
 
 .service-card p{
+  margin:0 0 12px;
   color:#444;
+  line-height:1.5;
   line-height: 1.6;
   margin: 0 0 14px 0;
 }
 
 .service-card ul{
+  margin:0;
+  padding-left:18px;
+  color:#444;
   margin: 0;
   padding-left: 18px;
-  color:#444;
 }
 
 .service-card li{
+  margin:8px 0;
   margin: 10px 0;
 }
 
-/* PRICING SPLIT */
+/* PRICING SPLIT: remove the "giant empty green panel" feel */
 .pricing-split{
-  padding: 58px 20px 80px;
+  background:#e6dfcf;
+  padding: 60px 20px;
   display:grid;
   grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  padding: 58px 20px 80px;
   gap: 26px;
-  align-items: start;
+  align-items: start;              /* keep tops aligned */
 }
 
+/* Left panel becomes a premium card instead of a big block */
 .pricing-left{
-  padding: 30px;
-  background: linear-gradient(180deg, rgba(44,59,45,.96), rgba(44,59,45,.86));
+  padding: 28px;
+  background: linear-gradient(180deg, rgba(44,59,45,.95), rgba(44,59,45,.85));
   color:white;
   border-radius: 16px;
+  padding: 30px;
+  background:
+    linear-gradient(180deg, rgba(44,59,45,.96), rgba(44,59,45,.86));
   box-shadow: 0 18px 46px rgba(0,0,0,.20);
-  min-height: unset;
+  min-height: unset;               /* IMPORTANT: stops huge empty area */
 }
 
 .pricing-left h2{
+  margin:0 0 12px;
+  font-size:28px;
   font-size: 30px;
   margin: 0 0 12px 0;
   letter-spacing: -0.01em;
 }
 
 .pricing-left p{
+  margin:0 0 18px;
+  line-height:1.6;
+  color: rgba(255,255,255,.9);
   margin: 0 0 18px 0;
   line-height: 1.65;
-  color: rgba(255,255,255,.9);
 }
 
+/* Make the CTA buttons here match the site feel */
 .mini-cta{
   display:flex;
   gap: 12px;
@@ -383,38 +410,42 @@ font-size:18px;
   margin-top: 6px;
 }
 
+/* Right panel wrapper */
 .pricing-right{
   border-radius: 16px;
-}
-
-#pricing{
-  scroll-margin-top: 110px;
 }
 
 /* TABLE: premium + rounded */
 .pricing-table{
   width:100%;
   border-collapse: collapse;
+  background: rgba(255,255,255,.9);
+  border: 1px solid rgba(0,0,0,.12);
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
   border-radius: 16px;
-  overflow: hidden;
+  overflow: hidden;                 /* ensures rounded corners apply */
   border: 1px solid rgba(0,0,0,.10);
   background: rgba(255,255,255,.85);
   box-shadow: 0 18px 46px rgba(0,0,0,.10);
 }
 
 .pricing-table th{
-  background: #2b2b2b;
+  background:#303030;
   color:white;
   padding: 16px;
   text-align:left;
+  font-size: 15px;
+  background: #2b2b2b;             /* slightly richer than flat #303030 */
   font-size: 14px;
   letter-spacing: 0.02em;
+  text-transform: none;
 }
 
 .pricing-table td{
   padding: 16px;
-  border-top: 1px solid rgba(0,0,0,.06);
+  border-top: 1px solid rgba(0,0,0,.08);
   color:#222;
+  border-top: 1px solid rgba(0,0,0,.06);
   font-size: 15px;
 }
 
@@ -422,30 +453,36 @@ font-size:18px;
 .pricing-table td:nth-child(2){
   text-align:right;
   font-weight:600;
-}
-
 /* Softer zebra */
 .pricing-table tbody tr:nth-child(even){
-  background: rgba(0,0,0,.04);
+  background: rgba(0,0,0,.025);
 }
 
-/* Small hover polish */
+.pricing-table tbody tr:nth-child(even){
+  background: rgba(0,0,0,.04);
+/* Small hover polish (optional, feels premium) */
 .pricing-table tbody tr:hover{
   background: rgba(44,59,45,.06);
 }
 
-/* Make "Included" look intentional */
-.pricing-table i{
-  opacity: .8;
-}
-
-/* Footer */
 .site-footer{
   background:#2c3b2d;
   color:white;
   text-align:center;
   padding: 22px 14px;
+/* Make "Included" look intentional */
+.pricing-table i{
+  opacity: .8;
 }
+
+/* Better spacing under fixed nav on this page (if needed) */
+.page-hero{
+  scroll-margin-top: 100px;
+}
+#pricing{
+  scroll-margin-top: 110px;
+}
+
 /* =========================
    RESPONSIVE IMPROVEMENTS
    ========================= */
@@ -453,7 +490,6 @@ font-size:18px;
 @media (max-width: 900px){
   .services-grid{ grid-template-columns: 1fr; }
   .pricing-split{ grid-template-columns: 1fr; }
-
   .page-hero{
     padding: 44px 18px 28px;
   }
@@ -467,6 +503,7 @@ font-size:18px;
   }
 
   .service-card{
+    border-radius: 14px;
     padding: 22px;
   }
 
@@ -478,5 +515,3 @@ font-size:18px;
     padding: 22px;
   }
 }
-
-
