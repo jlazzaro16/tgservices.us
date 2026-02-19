@@ -69,86 +69,63 @@ background:#1e2a20;
 
 
 /* HERO */
-
+/* HERO */
 
 .hero{
 
-height:20vh;
+position:relative;
+height:90vh;
 
 background-image:
+linear-gradient(rgba(20,30,20,.55), rgba(20,30,20,.55)),
 url('House.png');
+
 background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 
 display:flex;
 align-items:center;
-justify-content:center;
 
-text-align:center;
 color:white;
 
 }
 
-.hero-overlay{
-
-position:absolute;
-
-width:75%;
-
-height:25%;
-
-background:linear-gradient(
-
-90deg,
-
-rgba(20,30,20,.85),
-
-rgba(20,30,20,.4)
-
-);
-
-}
-
-
+/* Container for text */
 
 .hero-content{
 
-position:relative;
 max-width:700px;
-text-align:left;
+margin-left:80px;
 
 }
 
-
+/* Heading */
 
 .hero h1{
 
-font-size:52px;
+font-size:56px;
 margin-bottom:20px;
 
 }
 
-
+/* Paragraph */
 
 .hero p{
 
-font-size:20px;
+font-size:22px;
 margin-bottom:30px;
 
 }
 
-
+/* Buttons */
 
 .hero-buttons a{
 
 margin-right:15px;
-
 text-decoration:none;
 
 }
-
-
 
 .button-primary{
 
@@ -159,8 +136,6 @@ border-radius:4px;
 
 }
 
-
-
 .button-secondary{
 
 border:1px solid white;
@@ -169,25 +144,6 @@ color:white;
 border-radius:4px;
 
 }
-
-
-
-.button-primary:hover{
-
-background:#1e2a20;
-
-}
-
-
-
-.button-secondary:hover{
-
-background:white;
-color:black;
-
-}
-
-
 
 /* TRUST SECTION */
 
@@ -211,18 +167,3 @@ font-size:18px;
 color:#555;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
