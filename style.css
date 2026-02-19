@@ -554,9 +554,12 @@ body.services-page{
   box-shadow: 0 10px 26px rgba(44,59,45,.18);
 }
 
-.services-page .button-primary:hover,
-.services-page .button-secondary:hover{
+.services-page .button-primary:hover{
   background:transparent;
+  color:#2c3b2d;
+}
+.services-page .button-secondary:hover{
+  background:grey;
   color:#2c3b2d;
 }
 
