@@ -52,8 +52,6 @@ color:#2c3b2d;
 
 }
 
-
-
 .nav-button{
 
 background:#2c3b2d;
@@ -70,7 +68,6 @@ background:#1e2a20;
 }
 
 
-
 /* HERO */
 
 
@@ -78,7 +75,7 @@ background:#1e2a20;
 
 height:100vh;
 
-background-image:url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2070");
+background-image:img("House.png");
 
 background-size:cover;
 
@@ -93,6 +90,8 @@ justify-content:center;
 position:relative;
 
 color:white;
+
+margin-top:90px;
 
 }
 
@@ -219,3 +218,4 @@ font-size:18px;
 color:#555;
 
 }
+
