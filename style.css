@@ -74,9 +74,7 @@ background:#1e2a20;
 
 height:600px;
 
-background:
-linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
-url('House.png');
+background:url('House.png');
 
 background-size:cover;
 background-position:center;
@@ -209,6 +207,7 @@ font-size:18px;
 color:#555;
 
 }
+
 
 
 
