@@ -73,28 +73,20 @@ background:#1e2a20;
 
 .hero{
 
-height:100vh;
+height:600px;
 
-background-image:url("House.png");
+background:
+linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+url('House.png');
 
 background-size:cover;
-
 background-position:center;
+background-repeat:no-repeat;
 
 display:flex;
-
 align-items:center;
 
-justify-content:center;
-
-position:relative;
-
-color:white;
-
-margin-top:90px;
-
 }
-
 
 
 .hero-overlay{
@@ -218,5 +210,6 @@ font-size:18px;
 color:#555;
 
 }
+
 
 
