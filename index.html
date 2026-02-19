@@ -12,27 +12,26 @@
 <body>
 
   <!-- NAVBAR -->
-  <header class="nav">
-    <div class="nav-container">
+ <header class="nav">
+  <div class="nav-container">
 
-      <div class="logo">
-        <a href="index.html">
-          <img src="tg-logo-black-screens.png" alt="TG Services">
-        </a>
-      </div>
-
-      <!-- hamburger icon (mobile only via CSS) -->
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
-
-      <nav id="navMenu">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-        <a href="#" class="nav-button">Schedule Inspection</a>
-      </nav>
-
+    <div class="logo">
+      <a href="index.html">
+        <img src="tg-logo-black-screens.png" alt="TG Services">
+      </a>
     </div>
-  </header>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" class="nav-button">Schedule Inspection</a>
+    </nav>
+
+  </div>
+</header>
 
   <!-- HERO SECTION -->
   <section class="hero">
@@ -57,17 +56,20 @@
   </section>
 
   <!-- Mobile menu toggle -->
-  <script>
-    function toggleMenu(){
-      const menu = document.getElementById("navMenu");
-      if (menu.style.display === "flex") {
-        menu.style.display = "none";
-      } else {
-        menu.style.display = "flex";
-      }
-    }
-  </script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("menuToggle");
+    const menu = document.getElementById("navMenu");
+
+    if (!toggleBtn || !menu) return;
+
+    toggleBtn.addEventListener("click", () => {
+      menu.classList.toggle("open");
+    });
+  });
+</script>
 
 </body>
 </html>
+
 
