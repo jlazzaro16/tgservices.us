@@ -1,248 +1,14 @@
-/* =========================
-  TG SERVICES — FULL CSS
-  Modern nav + hero + mobile dropdown
-  ========================= */
-
-body{
-margin:0;
-padding-top:90px;          /* keeps content below fixed nav */
-font-family: Inter, sans-serif;
-color:#222;
-}
-
-/* =========================
-  NAVBAR (DESKTOP DEFAULT)
-  ========================= */
-
-.nav{
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-width: 100%;
-background: white;
-box-shadow: 0 2px 10px rgba(0,0,0,.05);
-z-index: 1000;
-}
-
-.nav-container{
-position: relative;         /* anchor for dropdown on mobile */
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-}
-
-.logo img{
-height:50px;
-width:auto;
-display:block;
-}
-
-/* Desktop menu: visible + horizontal */
-#navMenu{
-display:flex;
-align-items:center;
-gap:30px;                   /* better than margin-left */
-}
-
-/* Links */
-#navMenu a{
-text-decoration:none;
-color:#333;
-font-weight:500;
-}
-
-/* Hover */
-#navMenu a:hover{
-color:#2c3b2d;
-}
-
-/* CTA button link */
-#navMenu .nav-button{
-background:#2c3b2d;
-color:white;
-padding:10px 18px;
-border-radius:4px;
-}
-
-/* CTA hover */
-#navMenu .nav-button:hover{
-background:#1e2a20;
-}
-
-/* Hamburger hidden on desktop */
-.menu-toggle{
-display:none;
-font-size:28px;
-line-height:1;
-cursor:pointer;
-user-select:none;
-color:#2c3b2d;
-}
-
-/* =========================
-  HERO
-  ========================= */
-
-.hero{
-position:relative;
-height:90vh;
-
-background-image:
-linear-gradient(rgba(20,30,20,.55), rgba(20,30,20,.55)),
-url('House.png');
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-
-display:flex;
-align-items:center;
-color:white;
-}
-
-.hero-content{
-max-width:700px;
-margin-left:80px;
-}
-
-.hero h1{
-font-size:56px;
-margin:0 0 20px 0;
-}
-
-.hero p{
-font-size:22px;
-margin:0 0 30px 0;
-}
-
-.hero-buttons a{
-margin-right:15px;
-text-decoration:none;
-display:inline-block;
-}
-
-.button-primary{
-background:#2c3b2d;
-padding:14px 28px;
-color:white;
-border-radius:4px;
-}
-
-.button-primary:hover{
-background:#1e2a20;
-}
-
-.button-secondary{
-border:1px solid white;
-padding:14px 28px;
-color:white;
-border-radius:4px;
-}
-
-.button-secondary:hover{
-background:white;
-color:black;
-}
-
-/* =========================
-  TRUST SECTION
-  ========================= */
-
-.trust{
-padding:100px 20px;
-text-align:center;
-}
-
-.trust h2{
-font-size:36px;
-margin:0 0 20px 0;
-}
-
-.trust p{
-font-size:18px;
-color:#555;
-margin:0;
-}
-
-/* =========================
-  MOBILE NAV (Dropdown only)
-  ========================= */
-
-@media (max-width: 768px){
-
-body{
-padding-top:80px;        /* nav gets slightly shorter */
-}
-
-.nav-container{
-padding:16px 20px;
-}
-
-/* show hamburger */
-.menu-toggle{
-display:block;
-}
-
-/* hide menu until toggled by JS */
-#navMenu{
-display:none;
-position:absolute;
-top:100%;                /* sits directly under nav */
-left:0;
-width:100%;
-background:white;
-flex-direction:column;
-align-items:stretch;
-gap:0;
-box-shadow:0 4px 12px rgba(0,0,0,.1);
-}
-
-/* stacked links */
-#navMenu a{
-padding:16px 18px;
-border-bottom:1px solid #eee;
-}
-
-/* make CTA look like a full-width button row */
-#navMenu .nav-button{
-margin:12px 18px 18px 18px;
-text-align:center;
-border-bottom:none;
-}
-
-/* hero spacing on small screens */
-.hero{
-height:75vh;
-}
-
-.hero-content{
-margin-left:20px;
-margin-right:20px;
-max-width:600px;
-}
-
-.hero h1{
-font-size:40px;
-}
-
-.hero p{
-font-size:18px;
-}
-}
 /* ===== SERVICES PAGE ===== */
 /* =========================
    PREMIUM SERVICES POLISH
    Paste at bottom of style.css
    ========================= */
 
-.page-hero{
-/* Background + overall spacing */
+/* Page background + consistent section padding */
 .page-hero,
 .services-wrap,
 .pricing-split{
-background:#e6dfcf;
-  padding: 40px 20px 30px;
+  background:#e6dfcf;
 }
 
 /* Make services page content feel premium + centered */
@@ -256,6 +22,7 @@ background:#e6dfcf;
   box-shadow: 0 14px 40px rgba(0,0,0,.06);
   backdrop-filter: blur(6px);
 }
+
 .services-grid,
 .pricing-split{
   max-width: 1120px;
@@ -266,11 +33,10 @@ background:#e6dfcf;
 /* HERO: cleaner hierarchy */
 .page-hero{
   padding: 56px 20px 34px;
+  scroll-margin-top: 100px;
 }
 
 .page-hero h1{
-  font-size:44px;
-  margin:0 0 10px;
   color:#1e2a20;
   font-size: 52px;
   line-height: 1.05;
@@ -279,8 +45,6 @@ background:#e6dfcf;
 }
 
 .page-hero p{
-  font-size:18px;
-  margin:0 0 18px;
   color:#3b3b3b;
   font-size: 18px;
   line-height: 1.6;
@@ -297,8 +61,6 @@ background:#e6dfcf;
 
 /* SERVICES GRID: premium cards */
 .services-wrap{
-  background:#e6dfcf;
-  padding: 10px 20px 60px;
   padding: 10px 20px 70px;
 }
 
@@ -307,22 +69,17 @@ background:#e6dfcf;
   margin: 0 auto;
   display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
   gap: 22px;
-   align-items: stretch;
+  align-items: stretch;
 }
 
 .service-card{
-  background: rgba(255,255,255,.75);
-  border: 1px solid rgba(0,0,0,.08);
-  box-shadow: 0 8px 22px rgba(0,0,0,.06);
-  padding: 22px;
-  border-radius: 14px;
-   height: 100%;
+  height: 100%;
   background: rgba(255,255,255,.72);
   border: 1px solid rgba(0,0,0,.07);
   box-shadow: 0 12px 34px rgba(0,0,0,.08);
   padding: 26px;
+  border-radius: 14px;
   transition: transform .18s ease, box-shadow .18s ease;
   backdrop-filter: blur(6px);
 }
@@ -333,7 +90,6 @@ background:#e6dfcf;
 }
 
 .service-card h3{
-  margin:0 0 10px;
   color:#2c3b2d;
   font-size: 18px;
   letter-spacing: -0.01em;
@@ -341,68 +97,51 @@ background:#e6dfcf;
 }
 
 .service-card p{
-  margin:0 0 12px;
   color:#444;
-  line-height:1.5;
   line-height: 1.6;
   margin: 0 0 14px 0;
 }
 
 .service-card ul{
-  margin:0;
-  padding-left:18px;
-  color:#444;
   margin: 0;
   padding-left: 18px;
+  color:#444;
 }
 
 .service-card li{
-  margin:8px 0;
   margin: 10px 0;
 }
 
-/* PRICING SPLIT: remove the "giant empty green panel" feel */
+/* PRICING SPLIT */
 .pricing-split{
-  background:#e6dfcf;
-  padding: 60px 20px;
+  padding: 58px 20px 80px;
   display:grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  padding: 58px 20px 80px;
   gap: 26px;
-  align-items: start;              /* keep tops aligned */
+  align-items: start;
 }
 
-/* Left panel becomes a premium card instead of a big block */
 .pricing-left{
-  padding: 28px;
-  background: linear-gradient(180deg, rgba(44,59,45,.95), rgba(44,59,45,.85));
+  padding: 30px;
+  background: linear-gradient(180deg, rgba(44,59,45,.96), rgba(44,59,45,.86));
   color:white;
   border-radius: 16px;
-  padding: 30px;
-  background:
-    linear-gradient(180deg, rgba(44,59,45,.96), rgba(44,59,45,.86));
   box-shadow: 0 18px 46px rgba(0,0,0,.20);
-  min-height: unset;               /* IMPORTANT: stops huge empty area */
+  min-height: unset;
 }
 
 .pricing-left h2{
-  margin:0 0 12px;
-  font-size:28px;
   font-size: 30px;
   margin: 0 0 12px 0;
   letter-spacing: -0.01em;
 }
 
 .pricing-left p{
-  margin:0 0 18px;
-  line-height:1.6;
-  color: rgba(255,255,255,.9);
   margin: 0 0 18px 0;
   line-height: 1.65;
+  color: rgba(255,255,255,.9);
 }
 
-/* Make the CTA buttons here match the site feel */
 .mini-cta{
   display:flex;
   gap: 12px;
@@ -410,42 +149,38 @@ background:#e6dfcf;
   margin-top: 6px;
 }
 
-/* Right panel wrapper */
 .pricing-right{
   border-radius: 16px;
+}
+
+#pricing{
+  scroll-margin-top: 110px;
 }
 
 /* TABLE: premium + rounded */
 .pricing-table{
   width:100%;
   border-collapse: collapse;
-  background: rgba(255,255,255,.9);
-  border: 1px solid rgba(0,0,0,.12);
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
   border-radius: 16px;
-  overflow: hidden;                 /* ensures rounded corners apply */
+  overflow: hidden;
   border: 1px solid rgba(0,0,0,.10);
   background: rgba(255,255,255,.85);
   box-shadow: 0 18px 46px rgba(0,0,0,.10);
 }
 
 .pricing-table th{
-  background:#303030;
+  background: #2b2b2b;
   color:white;
   padding: 16px;
   text-align:left;
-  font-size: 15px;
-  background: #2b2b2b;             /* slightly richer than flat #303030 */
   font-size: 14px;
   letter-spacing: 0.02em;
-  text-transform: none;
 }
 
 .pricing-table td{
   padding: 16px;
-  border-top: 1px solid rgba(0,0,0,.08);
-  color:#222;
   border-top: 1px solid rgba(0,0,0,.06);
+  color:#222;
   font-size: 15px;
 }
 
@@ -453,34 +188,29 @@ background:#e6dfcf;
 .pricing-table td:nth-child(2){
   text-align:right;
   font-weight:600;
-/* Softer zebra */
-.pricing-table tbody tr:nth-child(even){
-  background: rgba(0,0,0,.025);
 }
 
+/* Softer zebra */
 .pricing-table tbody tr:nth-child(even){
   background: rgba(0,0,0,.04);
-/* Small hover polish (optional, feels premium) */
+}
+
+/* Small hover polish */
 .pricing-table tbody tr:hover{
   background: rgba(44,59,45,.06);
 }
 
-.site-footer{
-  background:#2c3b2d;
-  color:white;
-  text-align:center;
-  padding: 22px 14px;
 /* Make "Included" look intentional */
 .pricing-table i{
   opacity: .8;
 }
 
-/* Better spacing under fixed nav on this page (if needed) */
-.page-hero{
-  scroll-margin-top: 100px;
-}
-#pricing{
-  scroll-margin-top: 110px;
+/* Footer */
+.site-footer{
+  background:#2c3b2d;
+  color:white;
+  text-align:center;
+  padding: 22px 14px;
 }
 
 /* =========================
@@ -490,6 +220,7 @@ background:#e6dfcf;
 @media (max-width: 900px){
   .services-grid{ grid-template-columns: 1fr; }
   .pricing-split{ grid-template-columns: 1fr; }
+
   .page-hero{
     padding: 44px 18px 28px;
   }
@@ -503,7 +234,6 @@ background:#e6dfcf;
   }
 
   .service-card{
-    border-radius: 14px;
     padding: 22px;
   }
 
