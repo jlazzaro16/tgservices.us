@@ -2,142 +2,65 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>TG Services | Home Inspections</title>
+<title>TG Services | Services</title>
 
 <style>
 
-/* RESET */
-
 body{
+
 margin:0;
-font-family: Arial, sans-serif;
+font-family:Arial;
 background:#e6dfcf;
-color:#222;
-}
-
-
-/* NAVBAR */
-
-header{
-
-background:#2c3b2d;
-color:white;
-padding:20px 40px;
 
 }
 
-.nav{
+
+/* CONTAINER */
+
+.container{
 
 display:flex;
-justify-content:space-between;
-align-items:center;
-
-}
-
-.nav a{
-
-color:white;
-text-decoration:none;
-margin-left:30px;
-font-weight:bold;
+min-height:100vh;
 
 }
 
 
-/* HERO SECTION */
+/* LEFT PANEL */
 
-.hero{
+.left{
 
-height:500px;
+flex:1;
 
 background:
 linear-gradient(
-90deg,
-rgba(44,59,45,.9) 0%,
-rgba(44,59,45,.7) 40%,
-rgba(44,59,45,.2) 70%,
-rgba(44,59,45,0) 100%
-),
-url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80");
-
-background-size:cover;
-background-position:center;
-
-display:flex;
-align-items:center;
-
-}
-
-.hero-box{
-
-color:white;
-max-width:500px;
-margin-left:60px;
-
-}
-
-.hero h1{
-
-font-size:48px;
-margin-bottom:10px;
-
-}
-
-.hero p{
-
-font-size:20px;
-margin-bottom:20px;
-
-}
-
-.btn{
-
-background:#d6c7a1;
-padding:15px 30px;
-color:black;
-text-decoration:none;
-font-weight:bold;
-
-}
-
-
-/* SERVICES SECTION */
-
-.section{
-
-display:flex;
-padding:60px;
-
-gap:60px;
-
-}
-
-
-/* LEFT TEXT BOX */
-
-.info-box{
-
-background:
-linear-gradient(
-90deg,
+180deg,
 rgba(44,59,45,.95),
 rgba(44,59,45,.85)
 );
 
 color:white;
 
-padding:40px;
-
-flex:1;
+padding:60px;
 
 }
 
 
-/* TABLE BOX */
+.left h1{
 
-.table-box{
+font-size:42px;
+margin-bottom:20px;
+
+}
+
+
+
+/* RIGHT PANEL */
+
+.right{
 
 flex:1;
+
+padding:60px;
 
 }
 
@@ -148,23 +71,26 @@ table{
 
 width:100%;
 border-collapse:collapse;
-box-shadow:0 0 0 1px rgba(0,0,0,.2);
+
+box-shadow:
+0 0 0 1px rgba(0,0,0,.2);
 
 }
+
 
 th{
 
 background:#303030;
 color:white;
-padding:15px;
+padding:18px;
 text-align:left;
 
 }
 
+
 td{
 
-padding:15px;
-border:1px solid rgba(0,0,0,.1);
+padding:18px;
 
 }
 
@@ -178,6 +104,7 @@ width:65%;
 
 }
 
+
 td:last-child,
 th:last-child{
 
@@ -187,31 +114,24 @@ text-align:center;
 }
 
 
-/* FADED ROWS */
+
+/* FADE ROW EFFECT */
 
 tr:nth-child(odd) td{
 
-background:rgba(0,0,0,.25);
+background:rgba(0,0,0,.35);
 color:white;
 
 }
+
 
 tr:nth-child(even) td{
 
-background:rgba(0,0,0,.1);
+background:rgba(0,0,0,.15);
 color:white;
 
 }
 
-
-footer{
-
-background:#2c3b2d;
-color:white;
-padding:20px;
-text-align:center;
-
-}
 
 </style>
 
@@ -220,56 +140,18 @@ text-align:center;
 <body>
 
 
-<header>
 
-<div class="nav">
-
-<h2>TG Services</h2>
-
-<div>
-
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">Contact</a>
-
-</div>
-
-</div>
-
-</header>
+<div class="container">
 
 
 
-<section class="hero">
-
-<div class="hero-box">
+<div class="left">
 
 <h1>Inspection Services</h1>
 
-<p>Professional inspections tailored to your needs.</p>
-
-<a class="btn">Get Quote</a>
-
-</div>
-
-</section>
-
-
-
-
-<section class="section">
-
-
-
-<div class="info-box">
-
-<h2>Inspections</h2>
-
 <p>
 
-We provide thorough home inspections from roof to foundation.
-
-Use the chart to view additional services.
+We offer professional inspection services to ensure your home is safe and secure.
 
 </p>
 
@@ -278,15 +160,15 @@ Use the chart to view additional services.
 
 
 
-<div class="table-box">
+<div class="right">
 
 
 <table>
 
+
 <tr>
 
 <th>Inspection</th>
-
 <th>Price</th>
 
 </tr>
@@ -314,18 +196,12 @@ Use the chart to view additional services.
 </table>
 
 
+
 </div>
 
 
-</section>
 
-
-
-<footer>
-
-© 2026 TG Services
-
-</footer>
+</div>
 
 
 
