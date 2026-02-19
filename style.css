@@ -197,7 +197,9 @@ align-items:stretch;
 gap:0;
 box-shadow:0 4px 12px rgba(0,0,0,.1);
 }
-
+#navMenu.open{
+  display:flex;
+}
 /* stacked links */
 #navMenu a{
 padding:16px 18px;
@@ -476,4 +478,5 @@ font-size:18px;
     padding: 22px;
   }
 }
+
 
