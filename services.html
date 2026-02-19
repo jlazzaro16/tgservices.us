@@ -1,88 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TG Services | Services</title>
 
-<title>Services</title>
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
+  <!-- NAVBAR (same as homepage) -->
+  <header class="nav">
+    <div class="nav-container">
 
-<header>
+      <div class="logo">
+        <a href="index.html">
+          <img src="tg-logo-black-screens.png" alt="TG Services">
+        </a>
+      </div>
 
-<div class="nav">
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
 
-<h2>TG Services</h2>
+      <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" class="nav-button">Schedule Inspection</a>
+      </nav>
 
-<div class="nav-links">
+    </div>
+  </header>
 
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
+  <!-- SERVICES HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <h1>Inspection Services</h1>
+      <p>Clear, detailed inspections with optional add-ons—so you can make confident decisions.</p>
+      <div class="hero-buttons">
+        <a href="#pricing" class="button-primary">View Pricing</a>
+        <a href="contact.html" class="button-secondary">Get Quote</a>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <!-- SERVICES GRID -->
+  <section class="services-wrap">
 
-</div>
+    <div class="services-grid">
 
-</header>
+      <div class="service-card">
+        <h3>Full Home Inspection</h3>
+        <p>Comprehensive inspection from roof to foundation with a clear report and photos.</p>
+        <ul>
+          <li>Roof, attic, exterior</li>
+          <li>HVAC, plumbing, electrical</li>
+          <li>Structure, foundation, interior</li>
+        </ul>
+      </div>
 
+      <div class="service-card">
+        <h3>Same-Day Report</h3>
+        <p>Fast turnaround so you can move forward quickly and confidently.</p>
+        <ul>
+          <li>Digital report with photos</li>
+          <li>Clear summary + recommendations</li>
+          <li>Easy to share with your agent</li>
+        </ul>
+      </div>
 
+      <div class="service-card">
+        <h3>Optional Add-Ons</h3>
+        <p>Choose what fits your property and goals—add testing or specialty inspections.</p>
+        <ul>
+          <li>Radon, termite, mold</li>
+          <li>Sewer scope, water testing</li>
+          <li>Lead paint, asbestos sampling</li>
+        </ul>
+      </div>
 
-<section class="split">
+    </div>
 
+  </section>
 
-<div class="left-panel">
+  <!-- PRICING SPLIT (mockup feel) -->
+  <section class="pricing-split" id="pricing">
 
-<h1>Inspection Services</h1>
+    <div class="pricing-left">
+      <h2>Transparent Add-On Pricing</h2>
+      <p>
+        These optional services can be added to your inspection.
+        If you’re unsure what you need, we’ll help you choose based on the home and your concerns.
+      </p>
 
-<p>
+      <div class="mini-cta">
+        <a class="button-primary" href="contact.html">Request a Quote</a>
+        <a class="button-secondary" href="#">Schedule Inspection</a>
+      </div>
+    </div>
 
-We provide professional inspection services with detailed reporting.
+    <div class="pricing-right">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>Inspection</th>
+            <th>Price</th>
+          </tr>
+        </thead>
 
-</p>
+        <tbody>
+          <tr><td>Radon</td><td>$125</td></tr>
+          <tr><td>Termite</td><td>$75</td></tr>
+          <tr><td>Mold (Visual)</td><td><i>Included</i></td></tr>
+          <tr><td>Mold (Full/Air Quality)</td><td>$300</td></tr>
+          <tr><td>Sewer Scope Inspection</td><td>$150</td></tr>
+          <tr><td>Well/Water Testing</td><td>$150</td></tr>
+          <tr><td>Lead Based Paint</td><td>$175</td></tr>
+          <tr><td>Asbestos Sampling</td><td>$225</td></tr>
+          <tr><td>Additional Structure</td><td>$75+</td></tr>
+        </tbody>
+      </table>
+    </div>
 
-</div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© <span id="year"></span> TG Services</p>
+  </footer>
 
+  <!-- Mobile menu toggle -->
+  <script>
+    const toggleBtn = document.getElementById("menuToggle");
+    const menu = document.getElementById("navMenu");
 
-<div class="right-panel">
+    toggleBtn.addEventListener("click", () => {
+      menu.classList.toggle("open");
+    });
 
-
-<table>
-
-<tr>
-
-<th>Inspection</th>
-<th>Price</th>
-
-</tr>
-
-
-<tr><td>Radon</td><td>$125</td></tr>
-<tr><td>Termite</td><td>$75</td></tr>
-<tr><td>Mold Visual</td><td>Included</td></tr>
-<tr><td>Mold Air</td><td>$300</td></tr>
-<tr><td>Sewer Scope</td><td>$150</td></tr>
-<tr><td>Water Test</td><td>$150</td></tr>
-<tr><td>Lead</td><td>$175</td></tr>
-<tr><td>Asbestos</td><td>$225</td></tr>
-
-</table>
-
-
-</div>
-
-
-</section>
-
-
-<footer>
-
-© TG Services
-
-</footer>
-
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
