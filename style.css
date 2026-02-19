@@ -1,97 +1,229 @@
-body {
+/* GLOBAL */
 
+body{
 margin:0;
-font-family:Arial;
-
+font-family: 'Segoe UI', Arial, sans-serif;
+background:#e6dfcf;
+color:#222;
 }
 
-header {
+a{
+text-decoration:none;
+color:inherit;
+}
+
+/* NAVBAR */
+
+header{
 
 background:#2c3b2d;
+padding:20px 40px;
 color:white;
-padding:20px;
 
 }
 
-.nav {
+.nav{
 
 display:flex;
 justify-content:space-between;
+align-items:center;
 
 }
 
-.nav a {
+.nav-links a{
 
-color:white;
-margin-left:20px;
-text-decoration:none;
+margin-left:30px;
+font-weight:600;
 
 }
 
-.hero {
 
-height:400px;
+/* HERO */
 
-background:url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80") center/cover;
+.hero{
 
+height:500px;
+
+background:
+linear-gradient(
+90deg,
+rgba(44,59,45,.9),
+rgba(44,59,45,.6),
+rgba(44,59,45,.2),
+rgba(44,59,45,0)
+),
+url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80");
+
+background-size:cover;
 display:flex;
 align-items:center;
 
 }
 
-.hero-box {
-
-background:rgba(44,59,45,.8);
+.hero-content{
 
 color:white;
-
-padding:40px;
-
-margin-left:50px;
+margin-left:60px;
+max-width:500px;
 
 }
 
-.btn {
+.hero h1{
 
-background:#d4c4a3;
-
-padding:10px 20px;
-
-color:black;
-
-text-decoration:none;
+font-size:48px;
+margin-bottom:15px;
 
 }
 
-.content {
+.btn{
 
-padding:40px;
+background:#d4c5a0;
+padding:15px 30px;
+display:inline-block;
+margin-top:20px;
+font-weight:bold;
 
 }
 
-table {
+
+/* SPLIT SECTION */
+
+.split{
+
+display:flex;
+padding:80px 60px;
+gap:60px;
+
+}
+
+
+.left-panel{
+
+flex:1;
+
+background:
+linear-gradient(
+180deg,
+rgba(44,59,45,.95),
+rgba(44,59,45,.85)
+);
+
+color:white;
+padding:50px;
+
+}
+
+
+.right-panel{
+
+flex:1;
+
+}
+
+
+/* TABLE */
+
+table{
 
 width:100%;
-
 border-collapse:collapse;
+box-shadow:0 0 0 1px rgba(0,0,0,.2);
 
 }
 
-td,th {
 
-padding:15px;
-border:1px solid #ccc;
+th{
+
+background:#303030;
+color:white;
+padding:18px;
+text-align:left;
 
 }
 
-footer {
 
-background:#2c3b2d;
+td{
 
+padding:18px;
+
+}
+
+
+td:first-child,
+th:first-child{
+
+width:65%;
+
+}
+
+
+td:last-child,
+th:last-child{
+
+width:35%;
+text-align:center;
+
+}
+
+
+/* FADE ROWS */
+
+tr:nth-child(odd) td{
+
+background:rgba(0,0,0,.35);
 color:white;
 
-padding:20px;
+}
 
+
+tr:nth-child(even) td{
+
+background:rgba(0,0,0,.15);
+color:white;
+
+}
+
+
+/* CONTACT */
+
+.contact-box{
+
+max-width:600px;
+margin:auto;
+padding:60px;
+
+}
+
+
+input, textarea{
+
+width:100%;
+padding:15px;
+margin-top:10px;
+margin-bottom:20px;
+border:none;
+
+}
+
+
+button{
+
+background:#2c3b2d;
+color:white;
+padding:15px 30px;
+border:none;
+
+}
+
+
+/* FOOTER */
+
+footer{
+
+background:#2c3b2d;
+color:white;
 text-align:center;
+padding:20px;
+margin-top:40px;
 
 }
