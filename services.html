@@ -12,26 +12,26 @@
 <body>
 
   <!-- NAVBAR -->
-  <header class="nav">
-    <div class="nav-container">
+<header class="nav">
+  <div class="nav-container">
 
-      <div class="logo">
-        <a href="index.html">
-          <img src="tg-logo-black-screens.png" alt="TG Services">
-        </a>
-      </div>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
-
-      <nav id="navMenu">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-        <a href="#" class="nav-button">Schedule Inspection</a>
-      </nav>
-
+    <div class="logo">
+      <a href="index.html">
+        <img src="tg-logo-black-screens.png" alt="TG Services">
+      </a>
     </div>
-  </header>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" class="nav-button">Schedule Inspection</a>
+    </nav>
+
+  </div>
+</header>
 
   <!-- PAGE HERO -->
   <section class="page-hero">
@@ -127,16 +127,19 @@
     <p>© <span id="year"></span> TG Services</p>
   </footer>
 
-  <script>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("menuToggle");
     const menu = document.getElementById("navMenu");
+
+    if (!toggleBtn || !menu) return;
 
     toggleBtn.addEventListener("click", () => {
       menu.classList.toggle("open");
     });
-
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  });
+</script>
 
 </body>
 </html>
+
