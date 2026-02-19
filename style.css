@@ -22,7 +22,7 @@ right: 0;
 width: 100%;
 background: white;
 box-shadow: 0 2px 10px rgba(0,0,0,.05);
-z-index: 1000;
+z-index: 9999;
 }
 
 .nav-container{
@@ -79,6 +79,9 @@ line-height:1;
 cursor:pointer;
 user-select:none;
 color:#2c3b2d;
+background: transparent;   
+border: 0;               
+padding: 8px 10px;  
 }
 
 /* =========================
@@ -478,6 +481,7 @@ font-size:18px;
     padding: 22px;
   }
 }
+
 
 
 
