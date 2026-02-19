@@ -1,79 +1,67 @@
 /* =========================
-  TG SERVICES — FULL CSS
-  Modern nav + hero + mobile dropdown
+   TG SERVICES — FULL CSS
+   Modern nav + hero + mobile dropdown
+   TG SERVICES — FULL CSS (PROPER)
+   Includes:
+   - Fixed desktop nav
+   - Mobile dropdown nav (toggle class .open)
+   - Homepage hero
+   - Services page premium layout
   ========================= */
 
+/* ---------- GLOBAL ---------- */
 body{
 margin:0;
-padding-top:90px;          /* keeps content below fixed nav */
+  padding-top:90px;          /* keeps content below fixed nav */
+  padding-top:90px;                 /* keeps content below fixed nav */
 font-family: Inter, sans-serif;
 color:#222;
+  background:#e6dfcf;
 }
 
 /* =========================
-  NAVBAR (DESKTOP DEFAULT)
-  ========================= */
+   NAVBAR (DESKTOP DEFAULT)
+   ========================= */
+a{ color:inherit; }
 
+/* ---------- NAVBAR (DESKTOP DEFAULT) ---------- */
 .nav{
 position: fixed;
 top: 0;
-left: 0;
-right: 0;
-width: 100%;
-background: white;
-box-shadow: 0 2px 10px rgba(0,0,0,.05);
-z-index: 1000;
+@@ -26,7 +31,7 @@ body{
 }
 
 .nav-container{
-position: relative;         /* anchor for dropdown on mobile */
+  position: relative;         /* anchor for dropdown on mobile */
+  position: relative;               /* anchor for mobile dropdown */
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 60px;
-}
-
-.logo img{
-height:50px;
-width:auto;
-display:block;
-}
-
-/* Desktop menu: visible + horizontal */
+@@ -43,7 +48,7 @@ body{
 #navMenu{
 display:flex;
 align-items:center;
-gap:30px;                   /* better than margin-left */
+  gap:30px;                   /* better than margin-left */
+  gap:30px;
 }
 
 /* Links */
-#navMenu a{
-text-decoration:none;
-color:#333;
-font-weight:500;
-}
-
-/* Hover */
-#navMenu a:hover{
-color:#2c3b2d;
-}
-
-/* CTA button link */
-#navMenu .nav-button{
+@@ -63,7 +68,7 @@ body{
 background:#2c3b2d;
 color:white;
 padding:10px 18px;
-border-radius:4px;
+  border-radius:4px;
+  border-radius:8px;
 }
 
 /* CTA hover */
-#navMenu .nav-button:hover{
-background:#1e2a20;
-}
-
+@@ -74,17 +79,17 @@ body{
 /* Hamburger hidden on desktop */
 .menu-toggle{
 display:none;
+  background:transparent;
+  border:0;
+  padding:10px;
 font-size:28px;
 line-height:1;
 cursor:pointer;
@@ -82,51 +70,33 @@ color:#2c3b2d;
 }
 
 /* =========================
-  HERO
-  ========================= */
+   HERO
+   ========================= */
 
+/* ---------- HOMEPAGE HERO ---------- */
 .hero{
 position:relative;
 height:90vh;
-
-background-image:
-linear-gradient(rgba(20,30,20,.55), rgba(20,30,20,.55)),
-url('House.png');
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-
-display:flex;
-align-items:center;
-color:white;
-}
-
-.hero-content{
-max-width:700px;
-margin-left:80px;
-}
-
+@@ -109,11 +114,13 @@ body{
 .hero h1{
 font-size:56px;
 margin:0 0 20px 0;
+  letter-spacing:-0.02em;
 }
 
 .hero p{
 font-size:22px;
 margin:0 0 30px 0;
+  line-height:1.6;
 }
 
 .hero-buttons a{
-margin-right:15px;
-text-decoration:none;
-display:inline-block;
-}
-
-.button-primary{
+@@ -126,32 +133,30 @@ body{
 background:#2c3b2d;
 padding:14px 28px;
 color:white;
-border-radius:4px;
+  border-radius:4px;
+  border-radius:10px;
 }
 
 .button-primary:hover{
@@ -134,10 +104,12 @@ background:#1e2a20;
 }
 
 .button-secondary{
-border:1px solid white;
+  border:1px solid white;
+  border:1px solid rgba(255,255,255,.9);
 padding:14px 28px;
 color:white;
-border-radius:4px;
+  border-radius:4px;
+  border-radius:10px;
 }
 
 .button-secondary:hover{
@@ -146,115 +118,119 @@ color:black;
 }
 
 /* =========================
-  TRUST SECTION
-  ========================= */
+   TRUST SECTION
+   ========================= */
 
+/* ---------- TRUST SECTION ---------- */
 .trust{
 padding:100px 20px;
 text-align:center;
+  background:#e6dfcf;
 }
 
 .trust h2{
-font-size:36px;
-margin:0 0 20px 0;
-}
-
-.trust p{
+@@ -163,140 +168,73 @@ body{
 font-size:18px;
 color:#555;
 margin:0;
+  line-height:1.6;
 }
 
 /* =========================
-  MOBILE NAV (Dropdown only)
-  ========================= */
+   MOBILE NAV (Dropdown only)
+   ========================= */
 
 @media (max-width: 768px){
 
-body{
-padding-top:80px;        /* nav gets slightly shorter */
-}
+  body{
+    padding-top:80px;        /* nav gets slightly shorter */
+  }
 
-.nav-container{
-padding:16px 20px;
-}
+  .nav-container{
+    padding:16px 20px;
+  }
 
-/* show hamburger */
-.menu-toggle{
-display:block;
-}
+  /* show hamburger */
+  .menu-toggle{
+    display:block;
+  }
 
-/* hide menu until toggled by JS */
-#navMenu{
-display:none;
-position:absolute;
-top:100%;                /* sits directly under nav */
-left:0;
-width:100%;
-background:white;
-flex-direction:column;
-align-items:stretch;
-gap:0;
-box-shadow:0 4px 12px rgba(0,0,0,.1);
-}
+  /* hide menu until toggled by JS */
+  #navMenu{
+    display:none;
+    position:absolute;
+    top:100%;                /* sits directly under nav */
+    left:0;
+    width:100%;
+    background:white;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+  }
 
-/* stacked links */
-#navMenu a{
-padding:16px 18px;
-border-bottom:1px solid #eee;
-}
+  /* stacked links */
+  #navMenu a{
+    padding:16px 18px;
+    border-bottom:1px solid #eee;
+  }
 
-/* make CTA look like a full-width button row */
-#navMenu .nav-button{
-margin:12px 18px 18px 18px;
-text-align:center;
-border-bottom:none;
-}
+  /* make CTA look like a full-width button row */
+  #navMenu .nav-button{
+    margin:12px 18px 18px 18px;
+    text-align:center;
+    border-bottom:none;
+  }
 
-/* hero spacing on small screens */
-.hero{
-height:75vh;
-}
+  /* hero spacing on small screens */
+  .hero{
+    height:75vh;
+  }
 
-.hero-content{
-margin-left:20px;
-margin-right:20px;
-max-width:600px;
-}
+  .hero-content{
+    margin-left:20px;
+    margin-right:20px;
+    max-width:600px;
+  }
 
-.hero h1{
-font-size:40px;
-}
+  .hero h1{
+    font-size:40px;
+  }
 
-.hero p{
-font-size:18px;
+  .hero p{
+    font-size:18px;
+  }
 }
-}
-/* ===== SERVICES PAGE ===== */
 /* =========================
    PREMIUM SERVICES POLISH
    Paste at bottom of style.css
    ========================= */
+/* =========================================================
+   SERVICES PAGE (PREMIUM)
+   ========================================================= */
 
-.page-hero{
 /* Background + overall spacing */
 .page-hero,
 .services-wrap,
 .pricing-split{
+.page-hero{
 background:#e6dfcf;
-  padding: 40px 20px 30px;
+  padding: 56px 20px 34px;
+  scroll-margin-top: 100px;
 }
 
 /* Make services page content feel premium + centered */
 .page-hero-inner{
-  max-width: 1100px;
-  margin: 0 auto;
-  background: rgba(255,255,255,.35);
-  border: 1px solid rgba(0,0,0,.06);
-  border-radius: 18px;
-  padding: 26px;
-  box-shadow: 0 14px 40px rgba(0,0,0,.06);
-  backdrop-filter: blur(6px);
+  max-width:1120px;
+  margin:0 auto;
+
+  /* premium “glass” card */
+background: rgba(255,255,255,.35);
+border: 1px solid rgba(0,0,0,.06);
+border-radius: 18px;
+padding: 26px;
+box-shadow: 0 14px 40px rgba(0,0,0,.06);
+backdrop-filter: blur(6px);
 }
 .services-grid,
 .pricing-split{
@@ -269,210 +245,229 @@ background:#e6dfcf;
 }
 
 .page-hero h1{
-  font-size:44px;
-  margin:0 0 10px;
-  color:#1e2a20;
   font-size: 52px;
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin: 0 0 12px 0;
+  font-size:52px;
+  line-height:1.05;
+  letter-spacing:-0.02em;
+  margin:0 0 12px 0;
+  color:#1e2a20;
 }
 
 .page-hero p{
-  font-size:18px;
-  margin:0 0 18px;
-  color:#3b3b3b;
   font-size: 18px;
   line-height: 1.6;
   max-width: 62ch;
   margin: 0 0 22px 0;
+  font-size:18px;
+  line-height:1.6;
+  max-width:62ch;
+  margin:0 0 22px 0;
+  color:#3b3b3b;
 }
 
 /* Ensure hero buttons look like homepage */
 .page-hero .hero-buttons{
-  display:flex;
+display:flex;
   gap: 12px;
   flex-wrap: wrap;
+  gap:12px;
+  flex-wrap:wrap;
 }
 
 /* SERVICES GRID: premium cards */
+/* Services cards */
 .services-wrap{
   background:#e6dfcf;
-  padding: 10px 20px 60px;
-  padding: 10px 20px 70px;
+padding: 10px 20px 70px;
 }
 
 .services-grid{
-  max-width:1100px;
-  margin: 0 auto;
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
   gap: 22px;
    align-items: stretch;
+  max-width:1120px;
+  margin:0 auto;
+
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:22px;
+  align-items:stretch;
 }
 
 .service-card{
-  background: rgba(255,255,255,.75);
-  border: 1px solid rgba(0,0,0,.08);
-  box-shadow: 0 8px 22px rgba(0,0,0,.06);
-  padding: 22px;
   border-radius: 14px;
    height: 100%;
-  background: rgba(255,255,255,.72);
-  border: 1px solid rgba(0,0,0,.07);
-  box-shadow: 0 12px 34px rgba(0,0,0,.08);
-  padding: 26px;
-  transition: transform .18s ease, box-shadow .18s ease;
-  backdrop-filter: blur(6px);
-}
-
-.service-card:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 18px 46px rgba(0,0,0,.12);
+  height:100%;
+  border-radius:14px;
+background: rgba(255,255,255,.72);
+border: 1px solid rgba(0,0,0,.07);
+box-shadow: 0 12px 34px rgba(0,0,0,.08);
+@@ -311,135 +249,235 @@ body{
 }
 
 .service-card h3{
-  margin:0 0 10px;
-  color:#2c3b2d;
   font-size: 18px;
   letter-spacing: -0.01em;
   margin: 0 0 10px 0;
+  font-size:18px;
+  letter-spacing:-0.01em;
+  margin:0 0 10px 0;
+  color:#2c3b2d;
 }
 
 .service-card p{
-  margin:0 0 12px;
-  color:#444;
-  line-height:1.5;
   line-height: 1.6;
   margin: 0 0 14px 0;
+  line-height:1.6;
+  margin:0 0 14px 0;
+  color:#444;
 }
 
 .service-card ul{
+  margin: 0;
+  padding-left: 18px;
   margin:0;
   padding-left:18px;
   color:#444;
-  margin: 0;
-  padding-left: 18px;
 }
 
 .service-card li{
-  margin:8px 0;
   margin: 10px 0;
+  margin:10px 0;
+}
+
+/* Pricing split */
+#pricing{
+  scroll-margin-top:110px;
 }
 
 /* PRICING SPLIT: remove the "giant empty green panel" feel */
 .pricing-split{
-  background:#e6dfcf;
-  padding: 60px 20px;
+  max-width:1120px;
+  margin:0 auto;
+
   display:grid;
   grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  padding: 58px 20px 80px;
+  gap:26px;
+
+padding: 58px 20px 80px;
   gap: 26px;
   align-items: start;              /* keep tops aligned */
+  background:#e6dfcf;
+  align-items:start;
 }
 
 /* Left panel becomes a premium card instead of a big block */
 .pricing-left{
-  padding: 28px;
-  background: linear-gradient(180deg, rgba(44,59,45,.95), rgba(44,59,45,.85));
-  color:white;
   border-radius: 16px;
   padding: 30px;
   background:
     linear-gradient(180deg, rgba(44,59,45,.96), rgba(44,59,45,.86));
-  box-shadow: 0 18px 46px rgba(0,0,0,.20);
+  border-radius:16px;
+  padding:30px;
+  background: linear-gradient(180deg, rgba(44,59,45,.96), rgba(44,59,45,.86));
+box-shadow: 0 18px 46px rgba(0,0,0,.20);
   min-height: unset;               /* IMPORTANT: stops huge empty area */
+  color:white;
 }
 
 .pricing-left h2{
-  margin:0 0 12px;
-  font-size:28px;
   font-size: 30px;
   margin: 0 0 12px 0;
   letter-spacing: -0.01em;
+  font-size:30px;
+  margin:0 0 12px 0;
+  letter-spacing:-0.01em;
 }
 
 .pricing-left p{
-  margin:0 0 18px;
-  line-height:1.6;
-  color: rgba(255,255,255,.9);
   margin: 0 0 18px 0;
   line-height: 1.65;
+  margin:0 0 18px 0;
+  line-height:1.65;
+  color: rgba(255,255,255,.9);
 }
 
 /* Make the CTA buttons here match the site feel */
 .mini-cta{
-  display:flex;
-  gap: 12px;
-  flex-wrap: wrap;
   margin-top: 6px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:6px;
 }
 
 /* Right panel wrapper */
 .pricing-right{
   border-radius: 16px;
+  border-radius:16px;
 }
 
 /* TABLE: premium + rounded */
+/* Pricing table */
 .pricing-table{
-  width:100%;
-  border-collapse: collapse;
-  background: rgba(255,255,255,.9);
-  border: 1px solid rgba(0,0,0,.12);
-  box-shadow: 0 10px 25px rgba(0,0,0,.08);
   border-radius: 16px;
   overflow: hidden;                 /* ensures rounded corners apply */
-  border: 1px solid rgba(0,0,0,.10);
-  background: rgba(255,255,255,.85);
-  box-shadow: 0 18px 46px rgba(0,0,0,.10);
+  width:100%;
+  border-collapse:collapse;
+
+  border-radius:16px;
+  overflow:hidden;
+
+border: 1px solid rgba(0,0,0,.10);
+background: rgba(255,255,255,.85);
+box-shadow: 0 18px 46px rgba(0,0,0,.10);
 }
 
 .pricing-table th{
-  background:#303030;
-  color:white;
-  padding: 16px;
-  text-align:left;
-  font-size: 15px;
   background: #2b2b2b;             /* slightly richer than flat #303030 */
   font-size: 14px;
   letter-spacing: 0.02em;
   text-transform: none;
+  background:#2b2b2b;
+  color:white;
+  padding:16px;
+  text-align:left;
+  font-size:14px;
+  letter-spacing:0.02em;
 }
 
 .pricing-table td{
-  padding: 16px;
-  border-top: 1px solid rgba(0,0,0,.08);
-  color:#222;
-  border-top: 1px solid rgba(0,0,0,.06);
+  padding:16px;
+border-top: 1px solid rgba(0,0,0,.06);
   font-size: 15px;
+  color:#222;
+  font-size:15px;
+}
+
+.pricing-table th:nth-child(1),
+.pricing-table td:nth-child(1){
+  width:65%;
 }
 
 .pricing-table th:nth-child(2),
 .pricing-table td:nth-child(2){
+  width:35%;
   text-align:right;
   font-weight:600;
+}
+
 /* Softer zebra */
 .pricing-table tbody tr:nth-child(even){
-  background: rgba(0,0,0,.025);
+background: rgba(0,0,0,.025);
 }
 
-.pricing-table tbody tr:nth-child(even){
-  background: rgba(0,0,0,.04);
 /* Small hover polish (optional, feels premium) */
 .pricing-table tbody tr:hover{
-  background: rgba(44,59,45,.06);
+background: rgba(44,59,45,.06);
 }
 
-.site-footer{
-  background:#2c3b2d;
-  color:white;
-  text-align:center;
-  padding: 22px 14px;
 /* Make "Included" look intentional */
 .pricing-table i{
   opacity: .8;
+  opacity:.8;
 }
 
 /* Better spacing under fixed nav on this page (if needed) */
@@ -481,37 +476,122 @@ background:#e6dfcf;
 }
 #pricing{
   scroll-margin-top: 110px;
+/* Footer */
+.site-footer{
+  background:#2c3b2d;
+  color:white;
+  text-align:center;
+  padding:22px 14px;
 }
 
 /* =========================
    RESPONSIVE IMPROVEMENTS
    ========================= */
+/* =========================================================
+   MOBILE NAV + RESPONSIVE
+   ========================================================= */
 
 @media (max-width: 900px){
-  .services-grid{ grid-template-columns: 1fr; }
-  .pricing-split{ grid-template-columns: 1fr; }
-  .page-hero{
-    padding: 44px 18px 28px;
+  .services-grid{
+    grid-template-columns: 1fr;
   }
 
-  .page-hero h1{
+  .pricing-split{
+    grid-template-columns: 1fr;
+    padding: 40px 18px 60px;
+  }
+
+.page-hero{
+padding: 44px 18px 28px;
+}
+
+.page-hero h1{
     font-size: 40px;
-  }
+    font-size:40px;
+}
 
-  .services-wrap{
-    padding: 10px 18px 56px;
-  }
+.services-wrap{
+padding: 10px 18px 56px;
+}
 
-  .service-card{
+.service-card{
     border-radius: 14px;
     padding: 22px;
   }
 
   .pricing-split{
     padding: 40px 18px 60px;
+    padding:22px;
+}
+
+.pricing-left{
+    padding: 22px;
+    padding:22px;
+}
+}
+
+@media (max-width: 768px){
+
+  body{
+    padding-top:80px;
   }
 
-  .pricing-left{
-    padding: 22px;
+  .nav-container{
+    padding:16px 20px;
+  }
+
+  /* show hamburger */
+  .menu-toggle{
+    display:block;
+  }
+
+  /* hide menu until toggled by JS */
+  #navMenu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    background:white;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+    z-index:2000;
+  }
+
+  /* show when JS toggles class */
+  #navMenu.open{
+    display:flex;
+  }
+
+  #navMenu a{
+    padding:16px 18px;
+    border-bottom:1px solid #eee;
+  }
+
+  #navMenu .nav-button{
+    margin:12px 18px 18px 18px;
+    text-align:center;
+    border-bottom:none;
+  }
+
+  /* hero spacing on small screens */
+  .hero{
+    height:75vh;
+  }
+
+  .hero-content{
+    margin-left:20px;
+    margin-right:20px;
+    max-width:600px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero p{
+    font-size:18px;
   }
 }
