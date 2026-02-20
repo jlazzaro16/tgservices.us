@@ -711,7 +711,36 @@ body.services-page{
 }
 
 .calc-check{ cursor: pointer; }
+/* =========================
+   FORM CONTROL FIX (Desktop)
+   Ensures dropdown + checkboxes work + display properly
+   ========================= */
 
+.price-calc select,
+.price-calc input[type="checkbox"]{
+  -webkit-appearance: auto;
+  appearance: auto;
+  opacity: 1;
+  visibility: visible;
+}
+
+.price-calc input[type="checkbox"]{
+  accent-color: #2c3b2d; /* makes checks visible and on-brand */
+}
+
+/* Prevent the dropdown list from being clipped/hidden */
+.price-calc,
+.calc-inner,
+.calc-grid,
+.calc-card{
+  overflow: visible;
+}
+
+/* Give select its own stacking context so its menu isn't hidden */
+.calc-select{
+  position: relative;
+  z-index: 100;
+}
 /* =========================
    RESPONSIVE
    ========================= */
@@ -806,4 +835,5 @@ body.services-page{
   /* Pricing hub (two tables) stacking */
   .pricing-panels{ grid-template-columns: 1fr; }
 }
+
 
