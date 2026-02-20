@@ -60,7 +60,7 @@
       </div>
 
       <div class="service-card">
-        <h3>Same-Day Report</h3>
+        <h3>Rapid Report Delivery</h3>
         <p>Fast turnaround so you can move forward quickly and confidently.</p>
         <ul>
           <li>Digital report with photos</li>
@@ -71,7 +71,7 @@
 
       <div class="service-card">
         <h3>Optional Add-Ons</h3>
-        <p>Choose what fits your property and goals—add testing or specialty inspections.</p>
+        <p>Choose what fits your property and goals. Add testing or specialty inspections.</p>
         <ul>
           <li>Radon, termite, mold</li>
           <li>Sewer scope, water testing</li>
@@ -81,7 +81,148 @@
 
     </div>
   </section>
+<!-- PRICE CALCULATOR -->
+<section class="price-calc" id="calculator">
+  <div class="calc-inner">
+    <div class="calc-head">
+      <h2>Instant Price Estimate</h2>
+      <p>Select your home size and any add-ons. You’ll see your estimated total instantly.</p>
+    </div>
 
+    <div class="calc-grid">
+      <!-- Left: inputs -->
+      <div class="calc-card">
+        <label class="calc-label" for="sqftRange">Home size (sq ft)</label>
+        <select id="sqftRange" class="calc-select">
+  <option value="">Select range...</option>
+  <option value="1000">1000–1099</option>
+  <option value="1100">1100–1199</option>
+  <option value="1200">1200–1299</option>
+  <option value="1300">1300–1399</option>
+  <option value="1400">1400–1499</option>
+  <option value="1500">1500–1599</option>
+  <option value="1600">1600–1699</option>
+  <option value="1700">1700–1799</option>
+  <option value="1800">1800–1899</option>
+  <option value="1900">1900–1999</option>
+  <option value="2000">2000–2099</option>
+  <option value="2100">2100–2199</option>
+  <option value="2200">2200–2299</option>
+  <option value="2300">2300–2399</option>
+  <option value="2400">2400–2499</option>
+  <option value="2500">2500–2599</option>
+  <option value="2600">2600–2699</option>
+  <option value="2700">2700–2799</option>
+  <option value="2800">2800–2899</option>
+  <option value="2900">2900–2999</option>
+  <option value="3000">3000–3099</option>
+  <option value="3100">3100–3199</option>
+  <option value="3200">3200–3299</option>
+  <option value="3300">3300–3399</option>
+  <option value="3400">3400–3499</option>
+  <option value="3500">3500–3599</option>
+  <option value="3600">3600–3699</option>
+  <option value="3700">3700–3799</option>
+  <option value="3800">3800–3899</option>
+  <option value="3900">3900–3999</option>
+  <option value="4000">4000–4099</option>
+  <option value="4100">4100–4199</option>
+  <option value="4200">4200–4299</option>
+  <option value="4300">4300–4399</option>
+  <option value="4400">4400–4499</option>
+  <option value="4500">4500–4599</option>
+  <option value="4600">4600–4699</option>
+  <option value="4700">4700–4799</option>
+  <option value="4800">4800–4899</option>
+  <option value="4900">4900–4999</option>
+  <option value="5000">5000+ (starting at)</option>
+</select>
+
+        <div class="calc-divider"></div>
+
+        <div class="calc-label">Add-ons</div>
+        <div class="calc-checks">
+          <label class="calc-check">
+            <input type="checkbox" data-addon="radon" />
+            <span>Radon</span>
+            <em>+$125</em>
+          </label>
+
+          <label class="calc-check">
+            <input type="checkbox" data-addon="termite" />
+            <span>Termite</span>
+            <em>+$75</em>
+          </label>
+
+          <label class="calc-check">
+            <input type="checkbox" data-addon="moldAir" />
+            <span>Mold (Full / Air Quality)</span>
+            <em>+$300</em>
+          </label>
+
+          <label class="calc-check">
+            <input type="checkbox" data-addon="sewer" />
+            <span>Sewer Scope</span>
+            <em>+$150</em>
+          </label>
+
+          <label class="calc-check">
+            <input type="checkbox" data-addon="water" />
+            <span>Well / Water Testing</span>
+            <em>+$150</em>
+          </label>
+
+          <label class="calc-check">
+            <input type="checkbox" data-addon="lead" />
+            <span>Lead-Based Paint</span>
+            <em>+$175</em>
+          </label>
+
+          <label class="calc-check">
+            <input type="checkbox" data-addon="asbestos" />
+            <span>Asbestos Sampling</span>
+            <em>+$225</em>
+          </label>
+
+          <label class="calc-check">
+            <input type="checkbox" data-addon="structure" />
+            <span>Additional Structure</span>
+            <em>+$75+</em>
+          </label>
+        </div>
+
+        <p class="calc-note">
+          * Additional structures may vary. For homes above 5000 sq ft or unique properties, we may confirm final pricing.
+        </p>
+      </div>
+
+      <!-- Right: results -->
+      <div class="calc-card calc-result">
+        <div class="result-row">
+          <span>Base inspection</span>
+          <strong id="basePrice">$—</strong>
+        </div>
+
+        <div class="result-row">
+          <span>Add-ons</span>
+          <strong id="addonsPrice">$—</strong>
+        </div>
+
+        <div class="calc-divider"></div>
+
+        <div class="result-total">
+          <span>Estimated total</span>
+          <strong id="totalPrice">$—</strong>
+        </div>
+
+        <div class="result-cta">
+          <a class="button-primary" href="contact.html">Request a Quote</a>
+          <a class="button-secondary" href="#">Schedule Inspection</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   <!-- PRICING SPLIT -->
   <section class="pricing-split" id="pricing">
 
@@ -138,7 +279,95 @@
     });
   });
 </script>
+<script>
+  // Base prices by SQFT bracket (use lower bound pricing for the range)
+  const BASE_PRICES = {
+  1000: 300,
+  1100: 330,
+  1200: 360,
+  1300: 390,
+  1400: 420,
+  1500: 435,
+  1600: 464,
+  1700: 493,
+  1800: 522,
+  1900: 542,
+  2000: 560,
+  2100: 578,
+  2200: 594,
+  2300: 610,
+  2400: 624,
+  2500: 650,
+  2600: 663,
+  2700: 675,
+  2800: 700,
+  2900: 725,
+  3000: 750,
+  3100: 775,
+  3200: 800,
+  3300: 825,
+  3400: 850,
+  3500: 893,
+  3600: 936,
+  3700: 962,
+  3800: 988,
+  3900: 1014,
+  4000: 1040,
+  4100: 1087,
+  4200: 1134,
+  4300: 1161,
+  4400: 1188,
+  4500: 1238,
+  4600: 1288,
+  4700: 1316,
+  4800: 1344,
+  4900: 1397,
+  5000: 1750
+};
+  const ADDONS = {
+    radon: 125,
+    termite: 75,
+    moldAir: 300,
+    sewer: 150,
+    water: 150,
+    lead: 175,
+    asbestos: 225,
+    structure: 75 // show +75+; you can later change this to a range or “from”
+  };
 
+  const fmt = (n) => n.toLocaleString("en-US", { style: "currency", currency: "USD" });
+
+  function recalc(){
+    const sqftVal = document.getElementById("sqftRange").value;
+    const base = sqftVal ? (BASE_PRICES[parseInt(sqftVal, 10)] || 0) : 0;
+
+    let addonsTotal = 0;
+    document.querySelectorAll('.calc-check input[type="checkbox"]').forEach(cb => {
+      if (cb.checked){
+        const key = cb.getAttribute("data-addon");
+        addonsTotal += (ADDONS[key] || 0);
+      }
+    });
+
+    const total = base + addonsTotal;
+
+    document.getElementById("basePrice").textContent = base ? fmt(base) : "$—";
+    document.getElementById("addonsPrice").textContent = sqftVal ? fmt(addonsTotal) : "$—";
+    document.getElementById("totalPrice").textContent = sqftVal ? fmt(total) : "$—";
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    const sqft = document.getElementById("sqftRange");
+    if (!sqft) return;
+
+    sqft.addEventListener("change", recalc);
+    document.querySelectorAll('.calc-check input[type="checkbox"]').forEach(cb => {
+      cb.addEventListener("change", recalc);
+    });
+
+    recalc();
+  });
+</script>
 </body>
 </html>
 
