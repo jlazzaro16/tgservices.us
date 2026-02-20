@@ -253,50 +253,18 @@
   });
 </script>
 <script>
-  // Base prices by SQFT bracket (use lower bound pricing for the range)
   const BASE_PRICES = {
-  1000: 300,
-  1100: 330,
-  1200: 360,
-  1300: 390,
-  1400: 420,
-  1500: 435,
-  1600: 464,
-  1700: 493,
-  1800: 522,
-  1900: 542,
-  2000: 560,
-  2100: 578,
-  2200: 594,
-  2300: 610,
-  2400: 624,
-  2500: 650,
-  2600: 663,
-  2700: 675,
-  2800: 700,
-  2900: 725,
-  3000: 750,
-  3100: 775,
-  3200: 800,
-  3300: 825,
-  3400: 850,
-  3500: 893,
-  3600: 936,
-  3700: 962,
-  3800: 988,
-  3900: 1014,
-  4000: 1040,
-  4100: 1087,
-  4200: 1134,
-  4300: 1161,
-  4400: 1188,
-  4500: 1238,
-  4600: 1288,
-  4700: 1316,
-  4800: 1344,
-  4900: 1397,
-  5000: 1750
-};
+    1000: 300, 1100: 330, 1200: 360, 1300: 390, 1400: 420,
+    1500: 435, 1600: 464, 1700: 493, 1800: 522, 1900: 542,
+    2000: 560, 2100: 578, 2200: 594, 2300: 610, 2400: 624,
+    2500: 650, 2600: 663, 2700: 675, 2800: 700, 2900: 725,
+    3000: 750, 3100: 775, 3200: 800, 3300: 825, 3400: 850,
+    3500: 893, 3600: 936, 3700: 962, 3800: 988, 3900: 1014,
+    4000: 1040, 4100: 1087, 4200: 1134, 4300: 1161, 4400: 1188,
+    4500: 1238, 4600: 1288, 4700: 1316, 4800: 1344, 4900: 1397,
+    5000: 1750
+  };
+
   const ADDONS = {
     radon: 125,
     termite: 75,
@@ -305,7 +273,7 @@
     water: 150,
     lead: 175,
     asbestos: 225,
-    structure: 75 // show +75+; you can later change this to a range or “from”
+    structure: 75
   };
 
   const fmt = (n) => n.toLocaleString("en-US", { style: "currency", currency: "USD" });
@@ -324,7 +292,7 @@
 
     const total = base + addonsTotal;
 
-    document.getElementById("basePrice").textContent = base ? fmt(base) : "$—";
+    document.getElementById("basePrice").textContent = sqftVal ? fmt(base) : "$—";
     document.getElementById("addonsPrice").textContent = sqftVal ? fmt(addonsTotal) : "$—";
     document.getElementById("totalPrice").textContent = sqftVal ? fmt(total) : "$—";
   }
@@ -343,3 +311,4 @@
 </script>
 </body>
 </html>
+
