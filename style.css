@@ -5,7 +5,7 @@
 
 body{
 margin:0;
-padding-top:90px;          /* keeps content below fixed nav */
+padding-top:45px;          /* keeps content below fixed nav */
 font-family: Inter, sans-serif;
 color:#222;
 }
@@ -806,3 +806,4 @@ body.services-page{
   /* Pricing hub (two tables) stacking */
   .pricing-panels{ grid-template-columns: 1fr; }
 }
+
