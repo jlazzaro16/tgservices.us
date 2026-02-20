@@ -168,73 +168,6 @@ color:#555;
 margin:0;
 }
 
-/* =========================
- MOBILE NAV (Dropdown only)
- ========================= */
-
-@media (max-width: 768px){
-
-body{
-padding-top:80px;        /* nav gets slightly shorter */
-}
-
-.nav-container{
-padding:16px 20px;
-}
-
-/* show hamburger */
-.menu-toggle{
-display:block;
-}
-
-/* hide menu until toggled by JS */
-#navMenu{
-display:none;
-position:absolute;
-top:100%;                /* sits directly under nav */
-left:0;
-width:100%;
-background:white;
-flex-direction:column;
-align-items:stretch;
-gap:0;
-box-shadow:0 4px 12px rgba(0,0,0,.1);
-}
-#navMenu.open{
-  display:flex;
-}
-/* stacked links */
-#navMenu a{
-padding:16px 18px;
-border-bottom:1px solid #eee;
-}
-
-/* make CTA look like a full-width button row */
-#navMenu .nav-button{
-margin:12px 18px 18px 18px;
-text-align:center;
-border-bottom:none;
-}
-
-/* hero spacing on small screens */
-.hero{
-height:75vh;
-}
-
-.hero-content{
-margin-left:20px;
-margin-right:20px;
-max-width:600px;
-}
-
-.hero h1{
-font-size:40px;
-}
-
-.hero p{
-font-size:18px;
-}
-}
 /* ===== SERVICES PAGE ===== */
 /* =========================
    PREMIUM SERVICES POLISH
@@ -404,38 +337,7 @@ font-size:18px;
   text-align:center;
   padding: 22px 14px;
 }
-/* =========================
-   RESPONSIVE IMPROVEMENTS
-   ========================= */
 
-@media (max-width: 900px){
-  .services-grid{ grid-template-columns: 1fr; }
-  .pricing-split{ grid-template-columns: 1fr; }
-
-  .page-hero{
-    padding: 44px 18px 28px;
-  }
-
-  .page-hero h1{
-    font-size: 40px;
-  }
-
-  .services-wrap{
-    padding: 10px 18px 56px;
-  }
-
-  .service-card{
-    padding: 22px;
-  }
-
-  .pricing-split{
-    padding: 40px 18px 60px;
-  }
-
-  .pricing-left{
-    padding: 22px;
-  }
-}
 /* =========================
    SERVICES PAGE — PREMIUM LAYOUT (Overrides)
    ========================= */
@@ -677,28 +579,6 @@ body.services-page{
   margin-top: 18px;
 }
 
-/* Don’t let your services-page button override make these look weird */
-.price-calc .button-primary,
-.price-calc .button-secondary{
-  background:#2c3b2d;
-  color:white;
-  border: 0;
-  border-radius: 12px;
-  padding: 12px 16px;
-  font-weight: 700;
-  text-decoration:none;
-  display:inline-block;
-}
-
-.price-calc .button-secondary{
-  background: transparent;
-  color:#2c3b2d;
-  border: 1px solid rgba(44,59,45,.7);
-}
-
-.price-calc .button-primary:hover{ background:#1e2a20; }
-.price-calc .button-secondary:hover{ background: rgba(44,59,45,.08); }
-
 .calc-fineprint{
   margin-top: 14px;
   font-size: 12px;
@@ -706,11 +586,6 @@ body.services-page{
   line-height: 1.5;
 }
 
-@media (max-width: 900px){
-  .calc-top{ flex-direction:column; align-items:flex-start; }
-  .calc-badge{ width: fit-content; }
-  .calc-grid{ grid-template-columns: 1fr; }
-}
 /* =========================
    PRICING HUB — TWO TABLES
    ========================= */
@@ -814,7 +689,120 @@ body.services-page{
   margin-top: 18px;
 }
 
-/* mobile */
+/* =========================
+   CALCULATOR CLICK FIX
+   (prevents invisible overlays from blocking inputs)
+   ========================= */
+
+.price-calc,
+.calc-inner,
+.calc-card{
+  position: relative;
+  z-index: 50;
+}
+
+.price-calc,
+.calc-select,
+.calc-check,
+.calc-check input,
+.calc-check span,
+.calc-check em{
+  pointer-events: auto;
+}
+
+.calc-check{ cursor: pointer; }
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* MOBILE NAV + HOME HERO (phones/tablets) */
+@media (max-width: 768px){
+
+  body{
+    padding-top: 80px; /* nav gets slightly shorter */
+  }
+
+  .nav-container{
+    padding: 16px 20px;
+  }
+
+  .menu-toggle{
+    display: block;
+  }
+
+  #navMenu{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,.1);
+
+    pointer-events: none; /* prevents invisible layer blocking clicks */
+  }
+
+  #navMenu.open{
+    display: flex;
+    pointer-events: auto;
+  }
+
+  #navMenu a{
+    padding: 16px 18px;
+    border-bottom: 1px solid #eee;
+  }
+
+  #navMenu .nav-button{
+    margin: 12px 18px 18px 18px;
+    text-align: center;
+    border-bottom: none;
+  }
+
+  .hero{
+    height: 75vh;
+  }
+
+  .hero-content{
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 600px;
+  }
+
+  .hero h1{ font-size: 40px; }
+  .hero p{ font-size: 18px; }
+}
+
+/* TABLET + DOWN (services/pricing/calc layout stacking) */
 @media (max-width: 900px){
+
+  /* Services layout */
+  .services-grid{ grid-template-columns: 1fr; }
+  .services-wrap{ padding: 10px 18px 56px; }
+  .service-card{ padding: 22px; }
+
+  /* Page hero */
+  .page-hero{ padding: 44px 18px 28px; }
+  .page-hero h1{ font-size: 40px; }
+
+  /* If you're still using pricing-split anywhere */
+  .pricing-split{
+    grid-template-columns: 1fr;
+    padding: 40px 18px 60px;
+  }
+  .pricing-left{ padding: 22px; }
+
+  /* Calculator stacking */
+  .calc-top{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .calc-badge{ width: fit-content; }
+  .calc-grid{ grid-template-columns: 1fr; }
+
+  /* Pricing hub (two tables) stacking */
   .pricing-panels{ grid-template-columns: 1fr; }
 }
