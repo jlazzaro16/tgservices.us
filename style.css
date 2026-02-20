@@ -618,10 +618,13 @@ body.services-page{
   display:grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
-  align-items:start;
+  align-items:stretch;
 }
 
 .price-panel{
+   height: 100%;
+  display: flex;
+  flex-direction: column;
   background: rgba(255,255,255,.78);
   border: 1px solid rgba(0,0,0,.08);
   border-radius: 18px;
@@ -688,7 +691,13 @@ body.services-page{
   flex-wrap:wrap;
   margin-top: 18px;
 }
+.price-panel .panel-title{
+  flex: 0 0 auto;
+}
 
+.price-panel .pricing-table{
+  flex: 1 1 auto;
+}
 /* =========================
    CALCULATOR CLICK FIX
    (prevents invisible overlays from blocking inputs)
@@ -740,6 +749,31 @@ body.services-page{
 .calc-select{
   position: relative;
   z-index: 100;
+}
+/* === CALCULATOR: FORCE CLICKABILITY (put at bottom of CSS) === */
+.price-calc{
+  position: relative;
+  z-index: 999;
+  isolation: isolate; /* prevents weird stacking-context overlays */
+}
+
+.price-calc *{
+  pointer-events: auto;
+}
+
+/* Make sure no ancestor is clipping the select dropdown */
+.price-calc,
+.price-calc .calc-inner,
+.price-calc .calc-grid,
+.price-calc .calc-card{
+  overflow: visible !important;
+}
+
+/* Ensure native controls behave normally */
+.price-calc select,
+.price-calc input[type="checkbox"]{
+  appearance: auto !important;
+  -webkit-appearance: auto !important;
 }
 /* =========================
    RESPONSIVE
@@ -835,5 +869,6 @@ body.services-page{
   /* Pricing hub (two tables) stacking */
   .pricing-panels{ grid-template-columns: 1fr; }
 }
+
 
 
