@@ -1039,29 +1039,33 @@ body.contact-page{
   line-height: 1.7;
 }
 
-.contact-map{
-  margin-top: 18px;
+/* ===== CONTACT FORM LAYOUT FIX ===== */
+.contact-form *,
+.contact-form *::before,
+.contact-form *::after{
+  box-sizing: border-box;
 }
 
-.map-placeholder{
-  height: 180px;
-  border-radius: 16px;
-  border: 1px dashed rgba(0,0,0,.18);
-  background: rgba(255,255,255,.55);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#666;
-  text-align:center;
-  padding: 14px;
+/* Make grid columns behave and prevent overflow */
+.contact-form .form-row{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
 }
 
-.map-note{
-  margin: 10px 0 0;
-  font-size: 12px;
-  color:#666;
-  line-height: 1.5;
+/* Allow grid children to shrink instead of overflowing */
+.contact-form .form-field{
+  min-width: 0;
 }
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
 
 /* =========================
    RESPONSIVE
@@ -1165,6 +1169,7 @@ body.contact-page{
   /* Pricing hub (two tables) stacking */
   .pricing-panels{ grid-template-columns: 1fr; }
 }
+
 
 
 
