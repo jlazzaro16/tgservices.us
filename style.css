@@ -819,9 +819,261 @@ body.services-page{
 .nav{
   z-index: 9999;
 }
+
+/* =========================
+   CONTACT PAGE — PREMIUM
+   ========================= */
+
+body.contact-page{
+  background:#e6dfcf;
+}
+
+/* HERO */
+.contact-hero{
+  background:#e6dfcf;
+  padding: 120px 20px 26px;   /* space for fixed nav */
+}
+
+.contact-hero-inner{
+  max-width: 1120px;
+  margin: 0 auto;
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 22px;
+  padding: 34px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.08);
+  backdrop-filter: blur(8px);
+}
+
+.contact-hero h1{
+  margin: 0 0 10px;
+  font-size: 52px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color:#1e2a20;
+}
+
+.contact-hero p{
+  margin: 0 0 16px;
+  color:#444;
+  line-height: 1.6;
+  max-width: 70ch;
+}
+
+.contact-hero-badges{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill{
+  background: rgba(255,255,255,.65);
+  border: 1px solid rgba(0,0,0,.08);
+  padding: 9px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  color:#2c3b2d;
+  white-space: nowrap;
+}
+
+/* GRID */
+.contact-wrap{
+  background:#e6dfcf;
+  padding: 18px 20px 90px;
+}
+
+.contact-grid{
+  max-width: 1120px;
+  margin: 0 auto;
+  display:grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.contact-card{
+  background: rgba(255,255,255,.78);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 14px 40px rgba(0,0,0,.10);
+  backdrop-filter: blur(6px);
+}
+
+.card-head h2{
+  margin: 0 0 6px;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+  color:#1e2a20;
+}
+
+.card-head p{
+  margin: 0 0 18px;
+  color:#555;
+  line-height: 1.5;
+}
+
+/* FORM */
+.contact-form label{
+  display:block;
+  font-weight:700;
+  color:#2c3b2d;
+  margin-bottom: 8px;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.form-field{
+  margin-bottom: 14px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  width:100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.16);
+  font-size: 15px;
+  background: rgba(255,255,255,.95);
+  color:#222;
+}
+
+.contact-form textarea{
+  resize: vertical;
+}
+
+.form-check{
+  display:flex;
+  align-items:flex-start;
+  gap: 10px;
+  margin: 10px 0 14px;
+  color:#444;
+  font-size: 14px;
+}
+
+.form-check input{
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: #2c3b2d;
+}
+
+.form-actions{
+  display:flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+  align-items:center;
+}
+
+/* Reuse your button-primary; add a ghost button */
+.button-ghost{
+  display:inline-block;
+  padding: 14px 18px;
+  border-radius: 4px;
+  text-decoration:none;
+  border: 1px solid rgba(44,59,45,.35);
+  color:#2c3b2d;
+  background: rgba(255,255,255,.6);
+}
+
+.button-ghost:hover{
+  background: rgba(255,255,255,.9);
+}
+
+.form-fineprint{
+  margin: 14px 0 0;
+  font-size: 12px;
+  color:#666;
+  line-height: 1.5;
+}
+
+/* RIGHT SIDE */
+.info-list{
+  display:grid;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.info-item{
+  background: rgba(255,255,255,.62);
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.info-kicker{
+  font-size: 12px;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  color:#666;
+  margin-bottom: 6px;
+}
+
+.info-value{
+  font-weight: 800;
+  color:#1e2a20;
+  margin-bottom: 4px;
+}
+
+.info-sub{
+  color:#555;
+  font-size: 13px;
+}
+
+.contact-mini h3{
+  margin: 0 0 10px;
+  color:#2c3b2d;
+  font-size: 16px;
+}
+
+.mini-steps{
+  margin: 0;
+  padding-left: 18px;
+  color:#444;
+  line-height: 1.7;
+}
+
+.contact-map{
+  margin-top: 18px;
+}
+
+.map-placeholder{
+  height: 180px;
+  border-radius: 16px;
+  border: 1px dashed rgba(0,0,0,.18);
+  background: rgba(255,255,255,.55);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#666;
+  text-align:center;
+  padding: 14px;
+}
+
+.map-note{
+  margin: 10px 0 0;
+  font-size: 12px;
+  color:#666;
+  line-height: 1.5;
+}
+
 /* =========================
    RESPONSIVE
    ========================= */
+/* RESPONSIVE */
+@media (max-width: 900px){
+  .contact-hero{ padding: 98px 18px 18px; }
+  .contact-hero h1{ font-size: 40px; }
+
+  .contact-grid{ grid-template-columns: 1fr; }
+  .form-row{ grid-template-columns: 1fr; }
+}
 
 /* MOBILE NAV + HOME HERO (phones/tablets) */
 @media (max-width: 768px){
@@ -913,6 +1165,7 @@ body.services-page{
   /* Pricing hub (two tables) stacking */
   .pricing-panels{ grid-template-columns: 1fr; }
 }
+
 
 
 
