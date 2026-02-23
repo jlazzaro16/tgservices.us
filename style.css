@@ -315,6 +315,13 @@ margin:0;
   font-weight:600;
 }
 
+.pricing-hub .pricing-table td:nth-child(2),
+.pricing-hub .pricing-table td:nth-child(3),
+.pricing-hub .pricing-table th:nth-child(2),
+.pricing-hub .pricing-table th:nth-child(3){
+  text-align: center;
+  font-weight: 600;
+}
 /* Softer zebra */
 .pricing-table tbody tr:nth-child(even){
   background: rgba(0,0,0,.04);
@@ -907,6 +914,5 @@ body.services-page{
   .pricing-panels{ grid-template-columns: 1fr; }
 }
 
-* { outline: 1px solid rgba(255,0,0,.08); }
 
 
