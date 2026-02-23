@@ -1,58 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TG Services | Contact</title>
 
-<title>Contact</title>
-<link rel="stylesheet" href="style.css">
-
+  <link rel="stylesheet" href="style.css?v=9" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
 
+<body class="contact-page">
 
-<header>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="tg-logo-black-screens.png" alt="TG Services">
+        </a>
+      </div>
 
-<div class="nav">
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
 
-<h2>TG Services</h2>
+      <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+        <a href="#" class="nav-button">Schedule Inspection</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="nav-links">
+  <!-- HERO -->
+  <section class="contact-hero">
+    <div class="contact-hero-inner">
+      <h1>Contact TG Services</h1>
+      <p>Tell us what you need. We’ll respond quickly with clear next steps and availability.</p>
 
-<a href="index.html">Home</a>
-<a href="services.html">Services</a>
-<a href="contact.html">Contact</a>
+      <div class="contact-hero-badges">
+        <span class="pill">Fast response</span>
+        <span class="pill">Clear pricing</span>
+        <span class="pill">Detailed reporting</span>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <!-- CONTACT GRID -->
+  <section class="contact-wrap">
+    <div class="contact-grid">
 
-</div>
+      <!-- LEFT: FORM -->
+      <div class="contact-card">
+        <div class="card-head">
+          <h2>Request a Quote</h2>
+          <p>Fill this out and we’ll reach out ASAP.</p>
+        </div>
 
-</header>
+        <form class="contact-form" action="#" method="post">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Full Name</label>
+              <input id="name" name="name" type="text" placeholder="Jane Doe" required>
+            </div>
 
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="jane@email.com" required>
+            </div>
+          </div>
 
+          <div class="form-row">
+            <div class="form-field">
+              <label for="phone">Phone (optional)</label>
+              <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555">
+            </div>
 
-<div class="contact-box">
+            <div class="form-field">
+              <label for="contactMethod">Preferred Contact</label>
+              <select id="contactMethod" name="contactMethod" required>
+                <option value="">Select…</option>
+                <option>Email</option>
+                <option>Phone</option>
+                <option>Text</option>
+              </select>
+            </div>
+          </div>
 
+          <div class="form-row">
+            <div class="form-field">
+              <label for="service">Service Needed</label>
+              <select id="service" name="service" required>
+                <option value="">Select…</option>
+                <option>Full Home Inspection</option>
+                <option>Radon Test</option>
+                <option>Termite</option>
+                <option>Sewer Scope</option>
+                <option>Well / Water Testing</option>
+                <option>Lead-Based Paint</option>
+                <option>Asbestos Sampling</option>
+                <option>Mold (Full / Air Quality)</option>
+                <option>New Build / Phase Inspection</option>
+                <option>Other</option>
+              </select>
+            </div>
 
-<h1>Contact Us</h1>
+            <div class="form-field">
+              <label for="timeline">Timeline</label>
+              <select id="timeline" name="timeline" required>
+                <option value="">Select…</option>
+                <option>ASAP (1–3 days)</option>
+                <option>This week</option>
+                <option>Next 1–2 weeks</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
 
+          <div class="form-field">
+            <label for="address">Property Address (optional)</label>
+            <input id="address" name="address" type="text" placeholder="123 Main St, City, State">
+          </div>
 
-<input placeholder="Name">
+          <div class="form-field">
+            <label for="message">Details</label>
+            <textarea id="message" name="message" rows="6" placeholder="Square footage, add-ons you're considering, any concerns, preferred dates…"></textarea>
+          </div>
 
-<input placeholder="Email">
+          <label class="form-check">
+            <input type="checkbox" required>
+            <span>I agree to be contacted about my request.</span>
+          </label>
 
-<textarea placeholder="Message"></textarea>
+          <div class="form-actions">
+            <button class="button-primary" type="submit">Send Request</button>
+            <a class="button-ghost" href="services.html#calculator">Use Price Calculator</a>
+          </div>
 
-<button>Send</button>
+          <p class="form-fineprint">Submitting this form does not create an appointment. We’ll confirm details and availability.</p>
+        </form>
+      </div>
 
+      <!-- RIGHT: INFO / QUICK CONTACT -->
+      <div class="contact-card contact-side">
+        <div class="card-head">
+          <h2>Quick Contact</h2>
+          <p>Prefer to reach out directly?</p>
+        </div>
 
-</div>
+        <div class="info-list">
+          <div class="info-item">
+            <div class="info-kicker">Phone</div>
+            <div class="info-value">443-928-3652</div>
+            <div class="info-sub">Call or text</div>
+          </div>
 
+          <div class="info-item">
+            <div class="info-kicker">Email</div>
+            <div class="info-value">info@tgservices.com</div>
+            <div class="info-sub">We respond fast</div>
+          </div>
 
-<footer>
+          <div class="info-item">
+            <div class="info-kicker">Service Area</div>
+            <div class="info-value">Greater Chicago Area</div>
+            <div class="info-sub">And nearby suburbs</div>
+          </div>
+        </div>
 
-© TG Services
+        <div class="contact-mini">
+          <h3>What happens next?</h3>
+          <ol class="mini-steps">
+            <li>We confirm services + address.</li>
+            <li>We send availability + total estimate.</li>
+            <li>You pick a time — we lock it in.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</footer>
+  <footer class="site-footer">
+    <p>© 2023 TG Services</p>
+  </footer>
 
+  <script>
+    // Mobile nav toggle
+    window.addEventListener("DOMContentLoaded", () => {
+      const toggleBtn = document.getElementById("menuToggle");
+      const menu = document.getElementById("navMenu");
+      if (!toggleBtn || !menu) return;
 
+      toggleBtn.addEventListener("click", () => {
+        menu.classList.toggle("open");
+      });
+    });
+
+    // Footer year
+    window.addEventListener("DOMContentLoaded", () => {
+      const y = document.getElementById("year");
+      if (y) y.textContent = new Date().getFullYear();
+    });
+  </script>
 </body>
 </html>
