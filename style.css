@@ -1065,7 +1065,38 @@ body.contact-page{
   min-width: 0;
   box-sizing: border-box;
 }
+/* ===== CONTACT CHECKBOX FIX ===== */
 
+.form-check{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 12px 0 16px;
+  cursor: pointer;
+}
+
+/* Reset checkbox so it ignores input styles */
+.form-check input[type="checkbox"]{
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  margin: 2px 0 0 0;
+
+  padding: 0;
+  border-radius: 4px;
+
+  appearance: auto;
+  -webkit-appearance: checkbox;
+
+  background: transparent;
+  box-shadow: none;
+}
+
+/* keep label text clean */
+.form-check span{
+  line-height: 1.5;
+  color:#444;
+}
 
 /* =========================
    RESPONSIVE
@@ -1169,6 +1200,7 @@ body.contact-page{
   /* Pricing hub (two tables) stacking */
   .pricing-panels{ grid-template-columns: 1fr; }
 }
+
 
 
 
