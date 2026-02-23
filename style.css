@@ -586,6 +586,10 @@ body.services-page{
   line-height: 1.5;
 }
 
+.calc-result .pricing-cta{
+  display: inline-block;
+  justify-content: center;
+}
 /* =========================
    PRICING HUB — TWO TABLES
    ========================= */
@@ -775,6 +779,39 @@ body.services-page{
   appearance: auto !important;
   -webkit-appearance: auto !important;
 }
+
+
+/* Create a clean stacking context for the whole calculator */
+.price-calc{
+  position: relative;
+  z-index: 5;
+  isolation: isolate;
+}
+
+/* Ensure nothing inside gets clipped */
+.price-calc,
+.price-calc .calc-inner,
+.price-calc .calc-grid,
+.price-calc .calc-card{
+  overflow: visible !important;
+}
+
+/* Make sure the SELECT can "pop above" nearby cards/sections on desktop */
+.price-calc .calc-select{
+  position: relative;
+  z-index: 10;
+}
+
+/* When the dropdown is interacted with, force it above EVERYTHING except the nav */
+.price-calc .calc-select:focus,
+.price-calc .calc-select:active{
+  z-index: 9998;
+}
+
+/* Keep nav above the page (you already do this, but just to be explicit) */
+.nav{
+  z-index: 9999;
+}
 /* =========================
    RESPONSIVE
    ========================= */
@@ -870,5 +907,6 @@ body.services-page{
   .pricing-panels{ grid-template-columns: 1fr; }
 }
 
+* { outline: 1px solid rgba(255,0,0,.08); }
 
 
