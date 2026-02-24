@@ -1046,6 +1046,34 @@ body.contact-page{
   margin-bottom:18px;
   font-weight:600;
 }
+/* ===== CONTACT FORM STATUS BANNER ===== */
+.form-status{
+  display:none;
+  padding: 14px 14px;
+  border-radius: 12px;
+  margin: 0 0 16px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.form-status.is-success{
+  background: rgba(231, 244, 234, 1);
+  border: 1px solid rgba(183, 223, 192, 1);
+  color: #1e2a20;
+}
+
+.form-status.is-error{
+  background: rgba(253, 236, 236, 1);
+  border: 1px solid rgba(243, 181, 181, 1);
+  color: #7a1e1e;
+}
+
+/* Disabled submit styling */
+#submitBtn:disabled{
+  opacity: .7;
+  cursor: not-allowed;
+}
+
 /* On smaller screens, stack add-ons */
 @media (max-width: 900px){
   .check-group.multi{
@@ -1136,6 +1164,7 @@ body.contact-page{
   .contact-form .form-row{ grid-template-columns: 1fr; }
   .check-group.multi{ grid-template-columns: 1fr; }
 }
+
 
 
 
