@@ -89,41 +89,44 @@
   </div>
 
   <!-- Service + Add-ons: TWO columns -->
-<div class="form-row">
-  <div class="form-field">
-    <label>Service Needed</label>
-    <div class="check-inline">
-      <label class="inline-option">
-        <input type="radio" name="service" value="Home Inspection" required>
-        <span>Home Inspection</span>
-      </label>
-      <label class="inline-option">
-        <input type="radio" name="service" value="Removal Services">
-        <span>Removal Services</span>
-      </label>
-      <label class="inline-option">
-        <input type="radio" name="service" value="New Build / Phase Inspection">
-        <span>New Build / Phase Inspection</span>
-      </label>
-    </div>
-  </div>
-</div>
   <div class="form-row">
-  <div class="form-field">
-    <label>Add-Ons (Optional)</label>
-    <div class="check-inline">
-      <label class="inline-option">
-        <input type="checkbox" name="addOn[]" value="Radon Test">
-        <span>Radon Test</span>
-      </label>
-      <label class="inline-option">
-        <input type="checkbox" name="addOn[]" value="Termite">
-        <span>Termite</span>
-      </label>
-      <label class="inline-option">
-        <input type="checkbox" name="addOn[]" value="Sewer Scope">
-        <span>Sewer Scope</span>
-      </label>
+    <div class="form-field">
+      <label>Service Needed</label>
+      <div class="check-inline">
+        <label class="inline-option">
+          <input type="radio" name="service" value="Home Inspection" required>
+          <span>Home Inspection</span>
+        </label>
+
+        <label class="inline-option">
+          <input type="radio" name="service" value="Removal Services">
+          <span>Removal Services</span>
+        </label>
+
+        <label class="inline-option">
+          <input type="radio" name="service" value="New Build / Phase Inspection">
+          <span>New Build / Phase Inspection</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label>Add-Ons (Optional)</label>
+      <div class="check-inline">
+        <label class="inline-option">
+          <input type="checkbox" name="addOn[]" value="Radon Test">
+          <span>Radon Test</span>
+        </label>
+
+        <label class="inline-option">
+          <input type="checkbox" name="addOn[]" value="Termite">
+          <span>Termite</span>
+        </label>
+
+        <label class="inline-option">
+          <input type="checkbox" name="addOn[]" value="Sewer Scope">
+          <span>Sewer Scope</span>
+        </label>
 
         <label class="inline-option">
           <input type="checkbox" name="addOn[]" value="Well / Water Testing">
@@ -147,6 +150,8 @@
       </div>
     </div>
   </div>
+
+  <!-- Timeline + Address: TWO columns -->
   <div class="form-row">
     <div class="form-field">
       <label for="timeline">Timeline</label>
@@ -158,19 +163,20 @@
         <option value="Not sure yet">Not sure yet</option>
       </select>
     </div>
-  </div>
-    <div class="form-row">
+
     <div class="form-field">
       <label for="address">Property Address</label>
       <input id="address" name="address" type="text" placeholder="123 Main St, City, State" required>
     </div>
   </div>
+
   <div class="form-row">
     <div class="form-field">
       <label for="message">Details</label>
       <textarea id="message" name="message" rows="10" placeholder="Square footage, add-ons you're considering, any concerns, preferred dates…"></textarea>
     </div>
   </div>
+
   <label class="form-check">
     <input type="checkbox" name="consent" required>
     <span>I agree to be contacted about my request.</span>
@@ -252,6 +258,7 @@
   </script>
 </body>
 </html>
+
 
 
 
