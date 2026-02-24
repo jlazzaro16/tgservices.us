@@ -1008,7 +1008,14 @@ body.contact-page{
   line-height: 1.1;
   white-space: nowrap;
 }
+/* ===== CONTACT: FORCE ONE COLUMN AFTER USER INFO ===== */
+.after-user-info .form-row{
+  grid-template-columns: 1fr !important;
+}
 
+.after-user-info .form-field{
+  width: 100%;
+}
 /* Optional: highlight the selected option (nice polish) */
 .inline-option:has(input:checked){
   background: rgba(44,59,45,.12);
@@ -1104,5 +1111,6 @@ body.contact-page{
   .contact-form .form-row{ grid-template-columns: 1fr; }
   .check-group.multi{ grid-template-columns: 1fr; }
 }
+
 
 
