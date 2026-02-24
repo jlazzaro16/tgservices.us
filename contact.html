@@ -89,47 +89,40 @@
   </div>
 
   <!-- Service + Add-ons: TWO columns -->
-  <div class="form-row">
-    <div class="form-field">
-      <label>Service Needed</label>
-
-      <div class="check-group single-select">
-        <label class="check-option">
-          <input type="radio" name="service" value="Home Inspection" required>
-          <span>Home Inspection</span>
-        </label>
-
-        <label class="check-option">
-          <input type="radio" name="service" value="Removal Services">
-          <span>Removal Services</span>
-        </label>
-
-        <label class="check-option">
-          <input type="radio" name="service" value="New Build / Phase Inspection">
-          <span>New Build / Phase Inspection</span>
-        </label>
-      </div>
+<div class="form-row">
+  <div class="form-field">
+    <label>Service Needed</label>
+    <div class="check-inline">
+      <label class="inline-option">
+        <input type="radio" name="service" value="Home Inspection" required>
+        <span>Home Inspection</span>
+      </label>
+      <label class="inline-option">
+        <input type="radio" name="service" value="Removal Services">
+        <span>Removal Services</span>
+      </label>
+      <label class="inline-option">
+        <input type="radio" name="service" value="New Build / Phase Inspection">
+        <span>New Build / Phase Inspection</span>
+      </label>
     </div>
+  </div>
 
-    <div class="form-field">
-      <label>Add-Ons (Optional)</label>
-
-      <!-- add "multi" if your CSS supports it; otherwise remove it -->
-      <div class="check-group multi">
-        <label class="check-option">
-          <input type="checkbox" name="addOn[]" value="Radon Test">
-          <span>Radon Test</span>
-        </label>
-
-        <label class="check-option">
-          <input type="checkbox" name="addOn[]" value="Termite">
-          <span>Termite</span>
-        </label>
-
-        <label class="check-option">
-          <input type="checkbox" name="addOn[]" value="Sewer Scope">
-          <span>Sewer Scope</span>
-        </label>
+  <div class="form-field">
+    <label>Add-Ons (Optional)</label>
+    <div class="check-inline">
+      <label class="inline-option">
+        <input type="checkbox" name="addOn[]" value="Radon Test">
+        <span>Radon Test</span>
+      </label>
+      <label class="inline-option">
+        <input type="checkbox" name="addOn[]" value="Termite">
+        <span>Termite</span>
+      </label>
+      <label class="inline-option">
+        <input type="checkbox" name="addOn[]" value="Sewer Scope">
+        <span>Sewer Scope</span>
+      </label>
 
         <label class="check-option">
           <input type="checkbox" name="addOn[]" value="Well / Water Testing">
@@ -260,6 +253,7 @@
   </script>
 </body>
 </html>
+
 
 
 
