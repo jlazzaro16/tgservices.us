@@ -1021,6 +1021,11 @@ body.contact-page{
   background: rgba(44,59,45,.12);
   border-color: rgba(44,59,45,.35);
 }
+
+.after-user-info .check-inline{
+  max-width: 100%;
+}
+
 /* On smaller screens, stack add-ons */
 @media (max-width: 900px){
   .check-group.multi{
@@ -1111,6 +1116,7 @@ body.contact-page{
   .contact-form .form-row{ grid-template-columns: 1fr; }
   .check-group.multi{ grid-template-columns: 1fr; }
 }
+
 
 
 
