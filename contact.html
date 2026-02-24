@@ -55,7 +55,9 @@
           <p>Fill this out and we’ll reach out ASAP.</p>
         </div>
 
-<form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<form class="contact-form" action="https://formspree.io//f/meelvejw" method="POST">
+  <input type="hidden" name="_subject" value="New TG Services Contact Request">
+  <input type="hidden" name="_captcha" value="false">
   <div class="form-row">
             <div class="form-field">
               <label for="name">Full Name</label>
@@ -84,26 +86,59 @@
               </select>
             </div>
           </div>
-
           <div class="form-row">
             <div class="form-field">
-              <label for="service">Service Needed</label>
-              <select id="service" name="service" required>
-                <option value="">Select…</option>
-                <option>Home Inspection</option>
-                <option>Radon Test</option>
-                <option>Termite</option>
-                <option>Sewer Scope</option>
-                <option>Well / Water Testing</option>
-                <option>Lead-Based Paint</option>
-                <option>Asbestos Sampling</option>
-                <option>Mold (Full / Air Quality)</option>
-                <option>New Build / Phase Inspection</option>
-                <option>Other</option>
-              </select>
+              <label>Service Needed</label>
+              <div class="check-group single-select">
+                <label class="check-option">
+                  <input type="radio" name="service" value="Home Inspection" required>
+                  <span>Home Inspection</span>
+                </label>
+                <label class="check-option">
+                  <input type="radio" name="service" value="Removal Services">
+                  <span>Removal Services</span>
+                </label>
+                <label class="check-option">
+                  <input type="radio" name="service" value="New Build / Phase Inspection">
+                  <span>New Build / Phase Inspection</span>
+                </label>
+              </div>
             </div>
-
-            <div class="form-field">
+          <div class="form-field">
+            <label>Add-Ons (Optional)</label>
+            <div class="check-group">
+              <label class="check-option">
+                <input type="checkbox" name="addOn[]" value="Radon Test">
+                <span>Radon Test</span>
+              </label>
+              <label class="check-option">
+                <input type="checkbox" name="addOn[]" value="Termite">
+                <span>Termite</span>
+              </label>
+              <label class="check-option">
+                <input type="checkbox" name="addOn[]" value="Sewer Scope">
+                <span>Sewer Scope</span>
+              </label>
+              <label class="check-option">
+                <input type="checkbox" name="addOn[]" value="Well / Water Testing">
+                <span>Well / Water Testing</span>
+              </label>
+              <label class="check-option">
+                <input type="checkbox" name="addOn[]" value="Lead-Based Paint">
+                <span>Lead-Based Paint</span>
+              </label>
+              <label class="check-option">
+                <input type="checkbox" name="addOn[]" value="Asbestos Sampling">
+                <span>Asbestos Sampling</span>
+              </label>
+              <label class="check-option">
+                <input type="checkbox" name="addOn[]" value="Mold (Full / Air Quality)">
+                <span>Mold (Full / Air Quality)</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-row">
+              <div class="form-field">
               <label for="timeline">Timeline</label>
               <select id="timeline" name="timeline" required>
                 <option value="">Select…</option>
@@ -112,12 +147,11 @@
                 <option>Next 1–2 weeks</option>
                 <option>Not sure yet</option>
               </select>
-            </div>
+              </div>
           </div>
-
           <div class="form-field">
-            <label for="address">Property Address (optional)</label>
-            <input id="address" name="address" type="text" placeholder="123 Main St, City, State">
+            <label for="address">Property Address</label>
+            <input id="address" name="address" type="text" placeholder="123 Main St, City, State" required>
           </div>
 
           <div class="form-field">
@@ -126,7 +160,7 @@
           </div>
 
           <label class="form-check">
-            <input type="checkbox" required>
+            <input type="checkbox" name="consent" required>
             <span>I agree to be contacted about my request.</span>
           </label>
 
@@ -202,4 +236,5 @@
   </script>
 </body>
 </html>
+
 
