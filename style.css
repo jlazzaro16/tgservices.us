@@ -1159,6 +1159,24 @@ body.contact-page{
 .check-option span{
   white-space: nowrap;
 }
+/* ===== CHECKBOX/RADIO ALIGNMENT FIX ===== */
+
+.check-option{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;   /* ensures left → right layout */
+}
+
+/* force input before text */
+.check-option input{
+  order: 0;
+  margin: 0;
+}
+
+.check-option span{
+  order: 1;
+}
 /* =========================
    RESPONSIVE
    ========================= */
@@ -1261,6 +1279,7 @@ body.contact-page{
   /* Pricing hub (two tables) stacking */
   .pricing-panels{ grid-template-columns: 1fr; }
 }
+
 
 
 
