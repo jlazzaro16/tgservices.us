@@ -1,13 +1,19 @@
 /* =========================
- TG SERVICES — FULL CSS
- Modern nav + hero + mobile dropdown
+ TG SERVICES — FULL CSS (CLEANED / NO DUPLICATES)
+ Modern nav + hero + services + calculator + pricing + contact
  ========================= */
 
+/* Global */
+*,
+*::before,
+*::after{ box-sizing: border-box; }
+
 body{
-margin:0;
-padding-top:45px;          /* keeps content below fixed nav */
-font-family: Inter, sans-serif;
-color:#222;
+  margin:0;
+  padding-top:45px;            /* keeps content below fixed nav */
+  font-family: Inter, sans-serif;
+  color:#222;
+  background:#fff;
 }
 
 /* =========================
@@ -15,137 +21,123 @@ color:#222;
  ========================= */
 
 .nav{
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-width: 100%;
-background: white;
-box-shadow: 0 2px 10px rgba(0,0,0,.05);
-z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,.05);
+  z-index: 9999;
 }
 
 .nav-container{
-position: relative;         /* anchor for dropdown on mobile */
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
+  position: relative;          /* anchor for dropdown on mobile */
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
 }
 
 .logo img{
-height:50px;
-width:auto;
-display:block;
+  height:50px;
+  width:auto;
+  display:block;
 }
 
-/* Desktop menu: visible + horizontal */
 #navMenu{
-display:flex;
-align-items:center;
-gap:30px;                   /* better than margin-left */
+  display:flex;
+  align-items:center;
+  gap:30px;
 }
 
-/* Links */
 #navMenu a{
-text-decoration:none;
-color:#333;
-font-weight:500;
+  text-decoration:none;
+  color:#333;
+  font-weight:500;
 }
 
-/* Hover */
-#navMenu a:hover{
-color:#2c3b2d;
-}
+#navMenu a:hover{ color:#2c3b2d; }
 
-/* CTA button link */
 #navMenu .nav-button{
-background:#2c3b2d;
-color:white;
-padding:10px 18px;
-border-radius:4px;
+  background:#2c3b2d;
+  color:white;
+  padding:10px 18px;
+  border-radius:4px;
 }
+#navMenu .nav-button:hover{ background:#1e2a20; }
 
-/* CTA hover */
-#navMenu .nav-button:hover{
-background:#1e2a20;
-}
-
-/* Hamburger hidden on desktop */
 .menu-toggle{
-display:none;
-font-size:28px;
-line-height:1;
-cursor:pointer;
-user-select:none;
-color:#2c3b2d;
-background: transparent;   
-border: 0;               
-padding: 8px 10px;  
+  display:none;
+  font-size:28px;
+  line-height:1;
+  cursor:pointer;
+  user-select:none;
+  color:#2c3b2d;
+  background: transparent;
+  border: 0;
+  padding: 8px 10px;
 }
 
 /* =========================
- HERO
+ HOME HERO
  ========================= */
 
 .hero{
-position:relative;
-height:90vh;
-
-background-image:
-linear-gradient(rgba(20,30,20,.55), rgba(20,30,20,.55)),
-url('House.png');
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-
-display:flex;
-align-items:center;
-color:white;
+  position:relative;
+  height:90vh;
+  background-image:
+    linear-gradient(rgba(20,30,20,.55), rgba(20,30,20,.55)),
+    url('House.png');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  display:flex;
+  align-items:center;
+  color:white;
 }
 
 .hero-content{
-max-width:700px;
-margin-left:80px;
+  max-width:700px;
+  margin-left:80px;
 }
 
 .hero h1{
-font-size:56px;
-margin:0 0 20px 0;
+  font-size:56px;
+  margin:0 0 20px 0;
 }
-
 .hero p{
-font-size:22px;
-margin:0 0 30px 0;
+  font-size:22px;
+  margin:0 0 30px 0;
 }
 
 .hero-buttons a{
-margin-right:15px;
-text-decoration:none;
-display:inline-block;
+  margin-right:15px;
+  text-decoration:none;
+  display:inline-block;
 }
 
 .button-primary{
-background:#2c3b2d;
-padding:14px 28px;
-color:white;
-border-radius:4px;
+  background:#2c3b2d;
+  padding:14px 28px;
+  color:white;
+  border-radius:4px;
+  text-decoration:none;
+  display:inline-block;
 }
-
-.button-primary:hover{
-background:#1e2a20;
-}
+.button-primary:hover{ background:#1e2a20; }
 
 .button-secondary{
-border:1px solid white;
-padding:14px 28px;
-color:white;
-border-radius:4px;
+  border:1px solid white;
+  padding:14px 28px;
+  color:white;
+  border-radius:4px;
+  text-decoration:none;
+  display:inline-block;
 }
-
 .button-secondary:hover{
-background:white;
-color:black;
+  background:white;
+  color:black;
 }
 
 /* =========================
@@ -153,35 +145,46 @@ color:black;
  ========================= */
 
 .trust{
-padding:100px 20px;
-text-align:center;
+  padding:100px 20px;
+  text-align:center;
 }
-
 .trust h2{
-font-size:36px;
-margin:0 0 20px 0;
+  font-size:36px;
+  margin:0 0 20px 0;
 }
-
 .trust p{
-font-size:18px;
-color:#555;
-margin:0;
+  font-size:18px;
+  color:#555;
+  margin:0;
 }
 
-/* ===== SERVICES PAGE ===== */
 /* =========================
-   PREMIUM SERVICES POLISH
-   Paste at bottom of style.css
-   ========================= */
+ SERVICES PAGE — BASE
+ ========================= */
 
-/* Page background + consistent section padding */
-.page-hero,
-.services-wrap,
-.pricing-split{
+body.services-page{
   background:#e6dfcf;
 }
 
-/* Make services page content feel premium + centered */
+/* shared section backgrounds */
+.page-hero,
+.services-wrap,
+.pricing-split,
+.price-calc,
+.pricing-hub{
+  background:#e6dfcf;
+}
+
+/* HERO */
+.page-hero{
+  padding: 56px 20px 34px;
+  scroll-margin-top: 100px;
+}
+
+.services-page .page-hero{
+  padding: 120px 20px 44px; /* more intentional spacing under fixed nav */
+}
+
 .page-hero-inner{
   max-width: 1100px;
   margin: 0 auto;
@@ -193,17 +196,15 @@ margin:0;
   backdrop-filter: blur(6px);
 }
 
-.services-grid,
-.pricing-split{
+/* richer hero card on services page */
+.services-page .page-hero-inner{
   max-width: 1120px;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-/* HERO: cleaner hierarchy */
-.page-hero{
-  padding: 56px 20px 34px;
-  scroll-margin-top: 100px;
+  background: rgba(255,255,255,.55);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 22px;
+  padding: 34px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.08);
+  backdrop-filter: blur(8px);
 }
 
 .page-hero h1{
@@ -213,7 +214,6 @@ margin:0;
   letter-spacing: -0.02em;
   margin: 0 0 12px 0;
 }
-
 .page-hero p{
   color:#3b3b3b;
   font-size: 18px;
@@ -222,16 +222,18 @@ margin:0;
   margin: 0 0 22px 0;
 }
 
-/* Ensure hero buttons look like homepage */
 .page-hero .hero-buttons{
   display:flex;
   gap: 12px;
   flex-wrap: wrap;
 }
 
-/* SERVICES GRID: premium cards */
+/* SERVICES GRID */
 .services-wrap{
   padding: 10px 20px 70px;
+}
+.services-page .services-wrap{
+  padding: 24px 20px 70px;
 }
 
 .services-grid{
@@ -253,7 +255,6 @@ margin:0;
   transition: transform .18s ease, box-shadow .18s ease;
   backdrop-filter: blur(6px);
 }
-
 .service-card:hover{
   transform: translateY(-4px);
   box-shadow: 0 18px 46px rgba(0,0,0,.12);
@@ -265,24 +266,43 @@ margin:0;
   letter-spacing: -0.01em;
   margin: 0 0 10px 0;
 }
-
 .service-card p{
   color:#444;
   line-height: 1.6;
   margin: 0 0 14px 0;
 }
-
 .service-card ul{
   margin: 0;
   padding-left: 18px;
   color:#444;
 }
+.service-card li{ margin: 10px 0; }
 
-.service-card li{
-  margin: 10px 0;
+/* SERVICES PAGE PREMIUM BUTTON OVERRIDE */
+.services-page .button-primary,
+.services-page .button-secondary{
+  background:white;
+  color:#2c3b2d;
+  border:1px solid #2c3b2d;
+  transition: all .2s ease;
 }
 
-/* TABLE: premium + rounded */
+.services-page .button-primary{
+  box-shadow: 0 10px 26px rgba(44,59,45,.18);
+}
+.services-page .button-primary:hover{
+  background:transparent;
+  color:#2c3b2d;
+}
+.services-page .button-secondary:hover{
+  background:grey;
+  color:#2c3b2d;
+}
+
+/* =========================
+ TABLES (shared)
+ ========================= */
+
 .pricing-table{
   width:100%;
   border-collapse: collapse;
@@ -309,132 +329,38 @@ margin:0;
   font-size: 15px;
 }
 
+/* default “price” column alignment */
 .pricing-table th:nth-child(2),
 .pricing-table td:nth-child(2){
   text-align:right;
   font-weight:600;
 }
 
-.pricing-hub .pricing-table td:nth-child(2),
-.pricing-hub .pricing-table td:nth-child(3),
-.pricing-hub .pricing-table th:nth-child(2),
-.pricing-hub .pricing-table th:nth-child(3){
-  text-align: center;
-  font-weight: 600;
-}
-/* Softer zebra */
+/* zebra + hover */
 .pricing-table tbody tr:nth-child(even){
   background: rgba(0,0,0,.04);
 }
-
-/* Small hover polish */
 .pricing-table tbody tr:hover{
   background: rgba(44,59,45,.06);
 }
-
-/* Make "Included" look intentional */
-.pricing-table i{
-  opacity: .8;
-}
-
-/* Footer */
-.site-footer{
-  background:#2c3b2d;
-  color:white;
-  text-align:center;
-  padding: 22px 14px;
-}
+.pricing-table i{ opacity: .8; }
 
 /* =========================
-   SERVICES PAGE — PREMIUM LAYOUT (Overrides)
-   ========================= */
-
-body.services-page{
-  background:#e6dfcf;     /* removes white gutters */
-}
-
-/* keep everything aligned to one width */
-.services-page .page-hero-inner,
-.services-page .services-grid,
-.services-page .pricing-split{
-  max-width: 1120px;
-  margin-left:auto;
-  margin-right:auto;
-}
-
-/* more intentional spacing under fixed nav */
-.services-page .page-hero{
-  padding: 120px 20px 44px;
-}
-
-/* unify section rhythm */
-.services-page .services-wrap{
-  padding: 24px 20px 70px;
-}
-
-.services-page .pricing-split{
-  padding: 10px 20px 90px;
-  gap: 28px;
-  align-items: stretch;   /* makes left + right feel like a matched set */
-}
-
-/* richer hero card */
-.services-page .page-hero-inner{
-  background: rgba(255,255,255,.55);
-  border: 1px solid rgba(0,0,0,.08);
-  border-radius: 22px;
-  padding: 34px;
-  box-shadow: 0 18px 60px rgba(0,0,0,.08);
-  backdrop-filter: blur(8px);
-}
-
-/* make table side feel like a card */
-.services-page .pricing-right{
-  border-radius: 18px;
-  overflow: hidden;
-  background: rgba(255,255,255,.85);
-  border: 1px solid rgba(0,0,0,.10);
-  box-shadow: 0 18px 46px rgba(0,0,0,.10);
-}
-
-/* table inherits the wrapper (prevents “double card” look) */
-.services-page .pricing-table{
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  background: transparent;
-}
-
-/* premium buttons */
-.services-page .button-primary,
-.services-page .button-secondary{
-  background:white;
-  color:#2c3b2d;
-  border:1px solid #2c3b2d;
-  transition: all .2s ease;
-}
-
-.services-page .button-primary{
-  box-shadow: 0 10px 26px rgba(44,59,45,.18);
-}
-
-.services-page .button-primary:hover{
-  background:transparent;
-  color:#2c3b2d;
-}
-.services-page .button-secondary:hover{
-  background:grey;
-  color:#2c3b2d;
-}
-
-
-/* =========================
-   PRICE CALCULATOR — PREMIUM
-   ========================= */
+ PRICE CALCULATOR — PREMIUM + DESKTOP CLICK FIX
+ ========================= */
 
 .price-calc{
-  background: #e6dfcf;
   padding: 28px 20px 18px;
+  position: relative;
+  z-index: 5;
+  isolation: isolate;
+}
+
+.price-calc,
+.price-calc .calc-inner,
+.price-calc .calc-grid,
+.price-calc .calc-card{
+  overflow: visible !important;
 }
 
 .calc-inner{
@@ -456,7 +382,6 @@ body.services-page{
   letter-spacing: -0.02em;
   color:#1e2a20;
 }
-
 .calc-top p{
   margin: 0;
   color:#444;
@@ -504,6 +429,24 @@ body.services-page{
   border: 1px solid rgba(0,0,0,.16);
   font-size: 15px;
   background: rgba(255,255,255,.95);
+  position: relative;
+  z-index: 10;
+}
+
+/* dropdown menu shouldn’t be hidden behind anything */
+.price-calc .calc-select:focus,
+.price-calc .calc-select:active{ z-index: 9998; }
+
+/* force native controls to behave */
+.price-calc select,
+.price-calc input[type="checkbox"]{
+  appearance: auto !important;
+  -webkit-appearance: auto !important;
+  opacity: 1;
+  visibility: visible;
+}
+.price-calc input[type="checkbox"]{
+  accent-color:#2c3b2d;
 }
 
 .calc-divider{
@@ -526,8 +469,8 @@ body.services-page{
   border: 1px solid rgba(0,0,0,.06);
   background: rgba(255,255,255,.62);
   transition: transform .12s ease, box-shadow .12s ease;
+  cursor:pointer;
 }
-
 .calc-check:hover{
   transform: translateY(-1px);
   box-shadow: 0 10px 22px rgba(0,0,0,.08);
@@ -537,12 +480,10 @@ body.services-page{
   width: 18px;
   height: 18px;
 }
-
 .calc-check span{
   flex:1;
   color:#333;
 }
-
 .calc-check em{
   font-style: normal;
   font-weight: 700;
@@ -579,13 +520,6 @@ body.services-page{
   color:#1e2a20;
 }
 
-.result-cta{
-  display:flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 18px;
-}
-
 .calc-fineprint{
   margin-top: 14px;
   font-size: 12px;
@@ -593,16 +527,18 @@ body.services-page{
   line-height: 1.5;
 }
 
+/* center only the CTA button in the result card */
 .calc-result .pricing-cta{
-  display: inline-block;
-  justify-content: center;
+  display:flex;
+  justify-content:center;
+  margin-top: 18px;
 }
+
 /* =========================
-   PRICING HUB — TWO TABLES
-   ========================= */
+ PRICING HUB — TWO TABLES
+ ========================= */
 
 .pricing-hub{
-  background:#e6dfcf;
   padding: 40px 20px 90px;
 }
 
@@ -633,7 +569,7 @@ body.services-page{
 }
 
 .price-panel{
-   height: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background: rgba(255,255,255,.78);
@@ -690,148 +626,48 @@ body.services-page{
   font-size: 14px;
 }
 
+/* Center pricing columns inside pricing hub tables */
+.pricing-hub .pricing-table th:nth-child(2),
+.pricing-hub .pricing-table th:nth-child(3),
 .pricing-hub .pricing-table td:nth-child(2),
 .pricing-hub .pricing-table td:nth-child(3){
-  text-align:right;
+  text-align:center;
   font-weight: 600;
 }
 
+/* Pricing CTA (general) */
 .pricing-cta{
   display:flex;
   gap: 12px;
   flex-wrap:wrap;
   margin-top: 18px;
 }
-.price-panel .panel-title{
-  flex: 0 0 auto;
-}
 
-.price-panel .pricing-table{
-  flex: 1 1 auto;
-}
+.price-panel .panel-title{ flex: 0 0 auto; }
+.price-panel .pricing-table{ flex: 1 1 auto; }
+
 /* =========================
-   CALCULATOR CLICK FIX
-   (prevents invisible overlays from blocking inputs)
-   ========================= */
+ FOOTER
+ ========================= */
 
-.price-calc,
-.calc-inner,
-.calc-card{
-  position: relative;
-  z-index: 50;
-}
-
-.price-calc,
-.calc-select,
-.calc-check,
-.calc-check input,
-.calc-check span,
-.calc-check em{
-  pointer-events: auto;
-}
-
-.calc-check{ cursor: pointer; }
-/* =========================
-   FORM CONTROL FIX (Desktop)
-   Ensures dropdown + checkboxes work + display properly
-   ========================= */
-
-.price-calc select,
-.price-calc input[type="checkbox"]{
-  -webkit-appearance: auto;
-  appearance: auto;
-  opacity: 1;
-  visibility: visible;
-}
-
-.price-calc input[type="checkbox"]{
-  accent-color: #2c3b2d; /* makes checks visible and on-brand */
-}
-
-/* Prevent the dropdown list from being clipped/hidden */
-.price-calc,
-.calc-inner,
-.calc-grid,
-.calc-card{
-  overflow: visible;
-}
-
-/* Give select its own stacking context so its menu isn't hidden */
-.calc-select{
-  position: relative;
-  z-index: 100;
-}
-/* === CALCULATOR: FORCE CLICKABILITY (put at bottom of CSS) === */
-.price-calc{
-  position: relative;
-  z-index: 999;
-  isolation: isolate; /* prevents weird stacking-context overlays */
-}
-
-.price-calc *{
-  pointer-events: auto;
-}
-
-/* Make sure no ancestor is clipping the select dropdown */
-.price-calc,
-.price-calc .calc-inner,
-.price-calc .calc-grid,
-.price-calc .calc-card{
-  overflow: visible !important;
-}
-
-/* Ensure native controls behave normally */
-.price-calc select,
-.price-calc input[type="checkbox"]{
-  appearance: auto !important;
-  -webkit-appearance: auto !important;
-}
-
-
-/* Create a clean stacking context for the whole calculator */
-.price-calc{
-  position: relative;
-  z-index: 5;
-  isolation: isolate;
-}
-
-/* Ensure nothing inside gets clipped */
-.price-calc,
-.price-calc .calc-inner,
-.price-calc .calc-grid,
-.price-calc .calc-card{
-  overflow: visible !important;
-}
-
-/* Make sure the SELECT can "pop above" nearby cards/sections on desktop */
-.price-calc .calc-select{
-  position: relative;
-  z-index: 10;
-}
-
-/* When the dropdown is interacted with, force it above EVERYTHING except the nav */
-.price-calc .calc-select:focus,
-.price-calc .calc-select:active{
-  z-index: 9998;
-}
-
-/* Keep nav above the page (you already do this, but just to be explicit) */
-.nav{
-  z-index: 9999;
+.site-footer{
+  background:#2c3b2d;
+  color:white;
+  text-align:center;
+  padding: 22px 14px;
 }
 
 /* =========================
-   CONTACT PAGE — PREMIUM
-   ========================= */
+ CONTACT PAGE — PREMIUM
+ ========================= */
 
 body.contact-page{
   background:#e6dfcf;
 }
 
-/* HERO */
 .contact-hero{
   background:#e6dfcf;
-  padding: 120px 20px 26px;   /* space for fixed nav */
+  padding: 120px 20px 26px;
 }
 
 .contact-hero-inner{
@@ -876,7 +712,6 @@ body.contact-page{
   white-space: nowrap;
 }
 
-/* GRID */
 .contact-wrap{
   background:#e6dfcf;
   padding: 18px 20px 90px;
@@ -913,7 +748,7 @@ body.contact-page{
   line-height: 1.5;
 }
 
-/* FORM */
+/* CONTACT FORM */
 .contact-form label{
   display:block;
   font-weight:700;
@@ -921,13 +756,14 @@ body.contact-page{
   margin-bottom: 8px;
 }
 
-.form-row{
+.contact-form .form-row{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
-.form-field{
+.contact-form .form-field{
+  min-width:0;
   margin-bottom: 14px;
 }
 
@@ -935,6 +771,7 @@ body.contact-page{
 .contact-form select,
 .contact-form textarea{
   width:100%;
+  min-width:0;
   padding: 12px 12px;
   border-radius: 12px;
   border: 1px solid rgba(0,0,0,.16);
@@ -943,25 +780,7 @@ body.contact-page{
   color:#222;
 }
 
-.contact-form textarea{
-  resize: vertical;
-}
-
-.form-check{
-  display:flex;
-  align-items:flex-start;
-  gap: 10px;
-  margin: 10px 0 14px;
-  color:#444;
-  font-size: 14px;
-}
-
-.form-check input{
-  width: 18px;
-  height: 18px;
-  margin-top: 2px;
-  accent-color: #2c3b2d;
-}
+.contact-form textarea{ resize: vertical; }
 
 .form-actions{
   display:flex;
@@ -971,7 +790,6 @@ body.contact-page{
   align-items:center;
 }
 
-/* Reuse your button-primary; add a ghost button */
 .button-ghost{
   display:inline-block;
   padding: 14px 18px;
@@ -981,7 +799,6 @@ body.contact-page{
   color:#2c3b2d;
   background: rgba(255,255,255,.6);
 }
-
 .button-ghost:hover{
   background: rgba(255,255,255,.9);
 }
@@ -993,7 +810,87 @@ body.contact-page{
   line-height: 1.5;
 }
 
-/* RIGHT SIDE */
+/* Agreement checkbox row */
+.form-check{
+  display:flex;
+  align-items:flex-start;
+  gap: 10px;
+  margin: 12px 0 16px;
+  cursor: pointer;
+  color:#444;
+  font-size: 14px;
+}
+
+.form-check input[type="checkbox"]{
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  margin: 2px 0 0 0;
+  padding: 0;
+  border-radius: 4px;
+  appearance: auto;
+  -webkit-appearance: checkbox;
+  background: transparent;
+  box-shadow: none;
+  accent-color:#2c3b2d;
+}
+
+.form-check span{
+  line-height: 1.5;
+}
+
+/* Service / Add-on groups (radios + checkboxes) */
+.check-group{
+  display:grid;
+  gap: 10px;
+}
+
+/* If you add these classes in HTML:
+   <div class="check-group single"> ... </div>
+   <div class="check-group multi"> ... </div>
+*/
+.check-group.multi{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+}
+.check-group.single{
+  grid-template-columns: 1fr;
+}
+
+/* Backward compatibility with earlier class name */
+.single-select{ grid-template-columns: 1fr; }
+
+.check-option{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0,0,0,.06);
+  background: rgba(255,255,255,.62);
+  cursor:pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.check-option:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.08);
+}
+
+.check-option input{
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color:#2c3b2d;
+}
+
+.check-option span{
+  color:#333;
+  font-weight:500;
+  line-height: 1.3;
+}
+
+/* RIGHT SIDE INFO (contact) */
 .info-list{
   display:grid;
   gap: 12px;
@@ -1039,170 +936,18 @@ body.contact-page{
   line-height: 1.7;
 }
 
-/* ===== CONTACT FORM LAYOUT FIX ===== */
-.contact-form *,
-.contact-form *::before,
-.contact-form *::after{
-  box-sizing: border-box;
-}
-
-/* Make grid columns behave and prevent overflow */
-.contact-form .form-row{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-}
-
-/* Allow grid children to shrink instead of overflowing */
-.contact-form .form-field{
-  min-width: 0;
-}
-
-.contact-form input,
-.contact-form select,
-.contact-form textarea{
-  width: 100%;
-  min-width: 0;
-  box-sizing: border-box;
-}
-/* ===== CONTACT CHECKBOX FIX ===== */
-
-.form-check{
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin: 12px 0 16px;
-  cursor: pointer;
-}
-
-/* Reset checkbox so it ignores input styles */
-.form-check input[type="checkbox"]{
-  width: 18px;
-  height: 18px;
-  flex: 0 0 auto;
-  margin: 2px 0 0 0;
-
-  padding: 0;
-  border-radius: 4px;
-
-  appearance: auto;
-  -webkit-appearance: checkbox;
-
-  background: transparent;
-  box-shadow: none;
-}
-
-/* keep label text clean */
-.form-check span{
-  line-height: 1.5;
-  color:#444;
-}
-/* ===== CHECK GROUP (CONTACT FORM) ===== */
-
-.check-group{
-  display: grid;
-  gap: 10px;
-}
-
-.check-option{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  padding:12px;
-  border-radius:14px;
-  border:1px solid rgba(0,0,0,.06);
-  background: rgba(255,255,255,.62);
-  cursor:pointer;
-  transition: transform .12s ease, box-shadow .12s ease;
-}
-
-.check-option:hover{
-  transform: translateY(-1px);
-  box-shadow: 0 10px 22px rgba(0,0,0,.08);
-}
-
-.check-option input{
-  width:18px;
-  height:18px;
-  accent-color:#2c3b2d;
-}
-
-.check-option span{
-  flex:1;
-  color:#333;
-  font-weight:500;
-}
-/* ===== CONTACT FORM CHECKBOX LAYOUT ===== */
-
-/* Make service + addon groups form columns */
-.check-group{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px 18px;
-}
-
-/* Service Needed = single column but tighter */
-.single-select{
-  grid-template-columns: 1fr;
-}
-
-/* Make each option compact */
-.check-option{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 10px;
-  border-radius: 10px;
-}
-
-/* Prevent label text wrapping weirdly */
-.check-option span{
-  white-space: nowrap;
-}
-/* ===== CHECKBOX/RADIO ALIGNMENT FIX ===== */
-
-.check-option{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-direction: row;   /* ensures left → right layout */
-}
-
-/* force input before text */
-.check-option input{
-  order: 0;
-  margin: 0;
-}
-
-.check-option span{
-  order: 1;
-}
 /* =========================
-   RESPONSIVE
-   ========================= */
-/* RESPONSIVE */
-@media (max-width: 900px){
-  .contact-hero{ padding: 98px 18px 18px; }
-  .contact-hero h1{ font-size: 40px; }
+ RESPONSIVE
+ ========================= */
 
-  .contact-grid{ grid-template-columns: 1fr; }
-  .form-row{ grid-template-columns: 1fr; }
-}
-
-/* MOBILE NAV + HOME HERO (phones/tablets) */
+/* MOBILE NAV + HOME HERO */
 @media (max-width: 768px){
 
-  body{
-    padding-top: 80px; /* nav gets slightly shorter */
-  }
+  body{ padding-top: 80px; }
 
-  .nav-container{
-    padding: 16px 20px;
-  }
+  .nav-container{ padding: 16px 20px; }
 
-  .menu-toggle{
-    display: block;
-  }
+  .menu-toggle{ display: block; }
 
   #navMenu{
     display: none;
@@ -1215,8 +960,7 @@ body.contact-page{
     align-items: stretch;
     gap: 0;
     box-shadow: 0 4px 12px rgba(0,0,0,.1);
-
-    pointer-events: none; /* prevents invisible layer blocking clicks */
+    pointer-events: none;
   }
 
   #navMenu.open{
@@ -1235,9 +979,7 @@ body.contact-page{
     border-bottom: none;
   }
 
-  .hero{
-    height: 75vh;
-  }
+  .hero{ height: 75vh; }
 
   .hero-content{
     margin-left: 20px;
@@ -1249,26 +991,18 @@ body.contact-page{
   .hero p{ font-size: 18px; }
 }
 
-/* TABLET + DOWN (services/pricing/calc layout stacking) */
+/* TABLET + DOWN (services / calc / pricing / contact) */
 @media (max-width: 900px){
 
-  /* Services layout */
+  /* Services */
   .services-grid{ grid-template-columns: 1fr; }
   .services-wrap{ padding: 10px 18px 56px; }
   .service-card{ padding: 22px; }
 
-  /* Page hero */
   .page-hero{ padding: 44px 18px 28px; }
   .page-hero h1{ font-size: 40px; }
 
-  /* If you're still using pricing-split anywhere */
-  .pricing-split{
-    grid-template-columns: 1fr;
-    padding: 40px 18px 60px;
-  }
-  .pricing-left{ padding: 22px; }
-
-  /* Calculator stacking */
+  /* Calculator */
   .calc-top{
     flex-direction: column;
     align-items: flex-start;
@@ -1276,15 +1010,13 @@ body.contact-page{
   .calc-badge{ width: fit-content; }
   .calc-grid{ grid-template-columns: 1fr; }
 
-  /* Pricing hub (two tables) stacking */
+  /* Pricing hub */
   .pricing-panels{ grid-template-columns: 1fr; }
+
+  /* Contact */
+  .contact-hero{ padding: 98px 18px 18px; }
+  .contact-hero h1{ font-size: 40px; }
+  .contact-grid{ grid-template-columns: 1fr; }
+  .contact-form .form-row{ grid-template-columns: 1fr; }
+  .check-group.multi{ grid-template-columns: 1fr; }
 }
-
-
-
-
-
-
-
-
-
