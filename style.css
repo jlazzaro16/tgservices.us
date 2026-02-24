@@ -1026,6 +1026,16 @@ body.contact-page{
   max-width: 100%;
 }
 
+.form-success{
+  background:#e7f4ea;
+  border:1px solid #b7dfc0;
+  color:#1e2a20;
+  padding:14px;
+  border-radius:10px;
+  margin-bottom:18px;
+  font-weight:600;
+}
+
 /* On smaller screens, stack add-ons */
 @media (max-width: 900px){
   .check-group.multi{
@@ -1116,6 +1126,7 @@ body.contact-page{
   .contact-form .form-row{ grid-template-columns: 1fr; }
   .check-group.multi{ grid-template-columns: 1fr; }
 }
+
 
 
 
