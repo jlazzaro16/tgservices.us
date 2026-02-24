@@ -61,6 +61,7 @@
       action="https://script.google.com/macros/s/AKfycbzmaHpmv8kgLbo6yI9_bYzeMW0Y-TtD3wnruAObT2xCJUKhupCfl9rGTGi1-zgARbTD_Q/exec"
       method="POST"
       target="hidden_iframe">
+ <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe> 
 
 <input type="hidden" name="_subject" value="New TG Services Contact Request">
 <input type="hidden" name="_captcha" value="false">
@@ -88,9 +89,9 @@
     <label for="contactMethod">Preferred Contact</label>
     <select id="contactMethod" name="contactMethod" required>
       <option value="">Select…</option>
-      <option>Email</option>
-      <option>Phone</option>
-      <option>Text</option>
+      <option value="Email">Email</option>
+      <option value="Phone">Phone</option>
+      <option value="Text">Text</option>
     </select>
   </div>
 </div>
@@ -284,11 +285,10 @@ Submitting this form does not create an appointment. We’ll confirm details and
     });
   </script>
 <script>
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzmaHpmv8kgLbo6yI9_bYzeMW0Y-TtD3wnruAObT2xCJUKhupCfl9rGTGi1-zgARbTD_Q/exec";
-
   const form = document.getElementById("contactForm");
   const statusEl = document.getElementById("formStatus");
   const submitBtn = document.getElementById("submitBtn");
+  const iframe = document.getElementById("hidden_iframe");
 
   function setStatus(type, msg){
     statusEl.className = "form-status " + (type ? `is-${type}` : "");
@@ -296,58 +296,32 @@ Submitting this form does not create an appointment. We’ll confirm details and
     statusEl.style.display = msg ? "block" : "none";
   }
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
+  let submitting = false;
+
+  form.addEventListener("submit", () => {
+    submitting = true;
     setStatus("", "");
 
     submitBtn.disabled = true;
-    const originalText = submitBtn.textContent;
+    submitBtn.dataset.originalText = submitBtn.textContent;
     submitBtn.textContent = "Sending...";
+  });
 
-    try {
-      const fd = new FormData(form);
+  iframe.addEventListener("load", () => {
+    if (!submitting) return; // ignore initial load
+    submitting = false;
 
-      const payload = {
-        name: fd.get("name") || "",
-        email: fd.get("email") || "",
-        phone: fd.get("phone") || "",
-        contactMethod: fd.get("contactMethod") || "",
-        service: fd.get("service") || "",
-        timeline: fd.get("timeline") || "",
-        address: fd.get("address") || "",
-        message: fd.get("message") || "",
-        addOn: fd.getAll("addOn[]") // array
-      };
+    form.reset();
+    setStatus("success", "✅ Request sent! We’ll reach out soon.");
+    statusEl.scrollIntoView({ behavior: "smooth", block: "start" });
 
-      const res = await fetch(SCRIPT_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-
-      const text = await res.text();
-      let json;
-      try { json = JSON.parse(text); } catch { json = null; }
-
-      if (!res.ok || !json || json.ok !== true) {
-        throw new Error((json && json.error) ? json.error : "Submission failed");
-      }
-
-      form.reset();
-      setStatus("success", "✅ Request sent! We’ll reach out soon.");
-      statusEl.scrollIntoView({ behavior: "smooth", block: "start" });
-
-    } catch (err) {
-      setStatus("error", "⚠️ Something went wrong. Please try again, or email us directly.");
-      console.error(err);
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.textContent = originalText;
-    }
+    submitBtn.disabled = false;
+    submitBtn.textContent = submitBtn.dataset.originalText || "Send Request";
   });
 </script>
 </body>
 </html>
+
 
 
 
