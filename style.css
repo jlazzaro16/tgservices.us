@@ -935,7 +935,54 @@ body.contact-page{
   color:#444;
   line-height: 1.7;
 }
+/* ===== CONTACT PAGE: LAYOUT + CHECK OPTIONS FIX ===== */
 
+/* Ensure the grid actually takes full available width so it can center */
+.contact-grid,
+.contact-hero-inner{
+  width: 100%;
+}
+
+/* Keep the two-column layout on desktop */
+.contact-grid{
+  grid-template-columns: 1.25fr .75fr;
+  justify-content: center;
+}
+
+/* Make cards fill their grid columns */
+.contact-card{
+  width: 100%;
+}
+
+/* --- Fix “tiny pill” check/radio items --- */
+.check-group{
+  width: 100%;
+}
+
+.check-option{
+  width: 100%;              /* <- forces each option to fill its grid cell */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Let long labels wrap instead of squishing into narrow pills */
+.check-option span{
+  white-space: normal;
+}
+
+/* Add-Ons two-column layout (desktop) */
+.check-group.multi{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* On smaller screens, stack add-ons */
+@media (max-width: 900px){
+  .check-group.multi{
+    grid-template-columns: 1fr;
+  }
+}
 /* =========================
  RESPONSIVE
  ========================= */
@@ -1020,3 +1067,4 @@ body.contact-page{
   .contact-form .form-row{ grid-template-columns: 1fr; }
   .check-group.multi{ grid-template-columns: 1fr; }
 }
+
