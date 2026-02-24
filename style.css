@@ -976,7 +976,44 @@ body.contact-page{
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+/* ===== INLINE RADIO/CHECK OPTIONS ===== */
+.check-inline{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;       /* row gap / column gap */
+}
 
+.inline-option{
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,.10);
+  background: rgba(255,255,255,.60);
+  cursor: pointer;
+  user-select:none;
+}
+
+.inline-option input{
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color:#2c3b2d;
+}
+
+.inline-option span{
+  font-weight: 600;
+  color:#2c3b2d;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+/* Optional: highlight the selected option (nice polish) */
+.inline-option:has(input:checked){
+  background: rgba(44,59,45,.12);
+  border-color: rgba(44,59,45,.35);
+}
 /* On smaller screens, stack add-ons */
 @media (max-width: 900px){
   .check-group.multi{
@@ -1067,4 +1104,5 @@ body.contact-page{
   .contact-form .form-row{ grid-template-columns: 1fr; }
   .check-group.multi{ grid-template-columns: 1fr; }
 }
+
 
