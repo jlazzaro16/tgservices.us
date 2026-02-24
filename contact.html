@@ -55,7 +55,7 @@
           <p>Fill this out and we’ll reach out ASAP.</p>
         </div>
 
-<form class="contact-form" id=contactForm>
+<form class="contact-form" id="contactForm">
   <input type="hidden" name="_subject" value="New TG Services Contact Request">
   <input type="hidden" name="_captcha" value="false">
 
@@ -260,43 +260,71 @@
     });
   </script>
 <script>
-const scriptURL =
-"https://script.google.com/macros/s/AKfycbzEjHLJE0bTOI4ZdFpU5O1BxKDMfu99Y3ERYs_-CFXONM8WFsD5fqECFvqUYs0q5qXv8A/exec";
+  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzmaHpmv8kgLbo6yI9_bYzeMW0Y-TtD3wnruAObT2xCJUKhupCfl9rGTGi1-zgARbTD_Q/exec";
 
-const form = document.getElementById("contactForm");
+  const form = document.getElementById("contactForm");
+  const statusEl = document.getElementById("formStatus");
+  const submitBtn = document.getElementById("submitBtn");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  const formData = new FormData(form);
-
-  const data = {
-    name: formData.get("name"),
-    email: formData.get("email"),
-    phone: formData.get("phone"),
-    contactMethod: formData.get("contactMethod"),
-    service: formData.get("service"),
-    timeline: formData.get("timeline"),
-    address: formData.get("address"),
-    message: formData.get("message"),
-    addOn: formData.getAll("addOn[]")
-  };
-
-  const res = await fetch(scriptURL, {
-    method: "POST",
-    body: JSON.stringify(data)
-  });
-
-  if (res.ok) {
-    form.reset();
-    alert("✅ Request sent! We'll contact you shortly.");
-  } else {
-    alert("Something went wrong.");
+  function setStatus(type, msg){
+    statusEl.className = "form-status " + (type ? `is-${type}` : "");
+    statusEl.textContent = msg || "";
+    statusEl.style.display = msg ? "block" : "none";
   }
-});
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    setStatus("", "");
+
+    submitBtn.disabled = true;
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = "Sending...";
+
+    try {
+      const fd = new FormData(form);
+
+      const payload = {
+        name: fd.get("name") || "",
+        email: fd.get("email") || "",
+        phone: fd.get("phone") || "",
+        contactMethod: fd.get("contactMethod") || "",
+        service: fd.get("service") || "",
+        timeline: fd.get("timeline") || "",
+        address: fd.get("address") || "",
+        message: fd.get("message") || "",
+        addOn: fd.getAll("addOn[]") // array
+      };
+
+      const res = await fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      const text = await res.text();
+      let json;
+      try { json = JSON.parse(text); } catch { json = null; }
+
+      if (!res.ok || !json || json.ok !== true) {
+        throw new Error((json && json.error) ? json.error : "Submission failed");
+      }
+
+      form.reset();
+      setStatus("success", "✅ Request sent! We’ll reach out soon.");
+      statusEl.scrollIntoView({ behavior: "smooth", block: "start" });
+
+    } catch (err) {
+      setStatus("error", "⚠️ Something went wrong. Please try again, or email us directly.");
+      console.error(err);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalText;
+    }
+  });
 </script>
 </body>
 </html>
+
 
 
 
