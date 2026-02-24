@@ -55,126 +55,144 @@
           <p>Fill this out and we’ll reach out ASAP.</p>
         </div>
 
-<form class="contact-form" action="https://formspree.io//f/meelvejw" method="POST">
+<form class="contact-form" action="https://formspree.io/f/meelvejw" method="POST">
   <input type="hidden" name="_subject" value="New TG Services Contact Request">
   <input type="hidden" name="_captcha" value="false">
+
   <div class="form-row">
-            <div class="form-field">
-              <label for="name">Full Name</label>
-              <input id="name" name="name" type="text" placeholder="First Last" required>
-            </div>
+    <div class="form-field">
+      <label for="name">Full Name</label>
+      <input id="name" name="name" type="text" placeholder="First Last" required>
+    </div>
 
-            <div class="form-field">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="your@email.com" required>
-            </div>
-          </div>
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="your@email.com" required>
+    </div>
+  </div>
 
-          <div class="form-row">
-            <div class="form-field">
-              <label for="phone">Phone (optional)</label>
-              <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555">
-            </div>
+  <div class="form-row">
+    <div class="form-field">
+      <label for="phone">Phone (optional)</label>
+      <input id="phone" name="phone" type="tel" placeholder="(555) 555-5555">
+    </div>
 
-            <div class="form-field">
-              <label for="contactMethod">Preferred Contact</label>
-              <select id="contactMethod" name="contactMethod" required>
-                <option value="">Select…</option>
-                <option>Email</option>
-                <option>Phone</option>
-                <option>Text</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-field">
-              <label>Service Needed</label>
-              <div class="check-group single-select">
-                <label class="check-option">
-                  <input type="radio" name="service" value="Home Inspection" required>
-                  <span>Home Inspection</span>
-                </label>
-                <label class="check-option">
-                  <input type="radio" name="service" value="Removal Services">
-                  <span>Removal Services</span>
-                </label>
-                <label class="check-option">
-                  <input type="radio" name="service" value="New Build / Phase Inspection">
-                  <span>New Build / Phase Inspection</span>
-                </label>
-              </div>
-            </div>
-            <div class="form-row">
-          <div class="form-field">
-            <label>Add-Ons (Optional)</label>
-            <div class="check-group">
-              <label class="check-option">
-                <input type="checkbox" name="addOn[]" value="Radon Test">
-                <span>Radon Test</span>
-              </label>
-              <label class="check-option">
-                <input type="checkbox" name="addOn[]" value="Termite">
-                <span>Termite</span>
-              </label>
-              <label class="check-option">
-                <input type="checkbox" name="addOn[]" value="Sewer Scope">
-                <span>Sewer Scope</span>
-              </label>
-              <label class="check-option">
-                <input type="checkbox" name="addOn[]" value="Well / Water Testing">
-                <span>Well / Water Testing</span>
-              </label>
-              <label class="check-option">
-                <input type="checkbox" name="addOn[]" value="Lead-Based Paint">
-                <span>Lead-Based Paint</span>
-              </label>
-              <label class="check-option">
-                <input type="checkbox" name="addOn[]" value="Asbestos Sampling">
-                <span>Asbestos Sampling</span>
-              </label>
-              <label class="check-option">
-                <input type="checkbox" name="addOn[]" value="Mold (Full / Air Quality)">
-                <span>Mold (Full / Air Quality)</span>
-              </label>
-            </div>
-          </div>
-            </div>
-          <div class="form-row">
-              <div class="form-field">
-              <label for="timeline">Timeline</label>
-              <select id="timeline" name="timeline" required>
-                <option value="">Select…</option>
-                <option>ASAP (1–3 days)</option>
-                <option>This week</option>
-                <option>Next 1–2 weeks</option>
-                <option>Not sure yet</option>
-              </select>
-              </div>
-          </div>
-            <div class="form-row">
-          <div class="form-field">
-            <label for="address">Property Address</label>
-            <input id="address" name="address" type="text" placeholder="123 Main St, City, State" required>
-          </div>
-            </div>
-            <div class="form-row">
-          <div class="form-field">
-            <label for="message">Details</label>
-            <textarea id="message" name="message" rows="10" placeholder="Square footage, add-ons you're considering, any concerns, preferred dates…"></textarea>
-          </div>
-            </div>
-          <label class="form-check">
-            <input type="checkbox" name="consent" required>
-            <span>I agree to be contacted about my request.</span>
-          </label>
+    <div class="form-field">
+      <label for="contactMethod">Preferred Contact</label>
+      <select id="contactMethod" name="contactMethod" required>
+        <option value="">Select…</option>
+        <option value="Email">Email</option>
+        <option value="Phone">Phone</option>
+        <option value="Text">Text</option>
+      </select>
+    </div>
+  </div>
 
-          <div class="form-actions">
-            <button class="button-primary" type="submit">Send Request</button>
-            <a class="button-ghost" href="services.html#calculator">Use Price Calculator</a>
-          </div>
+  <!-- Service + Add-ons: TWO columns -->
+  <div class="form-row">
+    <div class="form-field">
+      <label>Service Needed</label>
 
-          <p class="form-fineprint">Submitting this form does not create an appointment. We’ll confirm details and availability.</p>
-        </form>
+      <div class="check-group single-select">
+        <label class="check-option">
+          <input type="radio" name="service" value="Home Inspection" required>
+          <span>Home Inspection</span>
+        </label>
+
+        <label class="check-option">
+          <input type="radio" name="service" value="Removal Services">
+          <span>Removal Services</span>
+        </label>
+
+        <label class="check-option">
+          <input type="radio" name="service" value="New Build / Phase Inspection">
+          <span>New Build / Phase Inspection</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label>Add-Ons (Optional)</label>
+
+      <!-- add "multi" if your CSS supports it; otherwise remove it -->
+      <div class="check-group multi">
+        <label class="check-option">
+          <input type="checkbox" name="addOn[]" value="Radon Test">
+          <span>Radon Test</span>
+        </label>
+
+        <label class="check-option">
+          <input type="checkbox" name="addOn[]" value="Termite">
+          <span>Termite</span>
+        </label>
+
+        <label class="check-option">
+          <input type="checkbox" name="addOn[]" value="Sewer Scope">
+          <span>Sewer Scope</span>
+        </label>
+
+        <label class="check-option">
+          <input type="checkbox" name="addOn[]" value="Well / Water Testing">
+          <span>Well / Water Testing</span>
+        </label>
+
+        <label class="check-option">
+          <input type="checkbox" name="addOn[]" value="Lead-Based Paint">
+          <span>Lead-Based Paint</span>
+        </label>
+
+        <label class="check-option">
+          <input type="checkbox" name="addOn[]" value="Asbestos Sampling">
+          <span>Asbestos Sampling</span>
+        </label>
+
+        <label class="check-option">
+          <input type="checkbox" name="addOn[]" value="Mold (Full / Air Quality)">
+          <span>Mold (Full / Air Quality)</span>
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="timeline">Timeline</label>
+      <select id="timeline" name="timeline" required>
+        <option value="">Select…</option>
+        <option value="ASAP (1–3 days)">ASAP (1–3 days)</option>
+        <option value="This week">This week</option>
+        <option value="Next 1–2 weeks">Next 1–2 weeks</option>
+        <option value="Not sure yet">Not sure yet</option>
+      </select>
+    </div>
+
+    <div class="form-field">
+      <label for="address">Property Address</label>
+      <input id="address" name="address" type="text" placeholder="123 Main St, City, State" required>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="message">Details</label>
+      <textarea id="message" name="message" rows="10" placeholder="Square footage, add-ons you're considering, any concerns, preferred dates…"></textarea>
+    </div>
+  </div>
+
+  <label class="form-check">
+    <input type="checkbox" name="consent" required>
+    <span>I agree to be contacted about my request.</span>
+  </label>
+
+  <div class="form-actions">
+    <button class="button-primary" type="submit">Send Request</button>
+    <a class="button-ghost" href="services.html#calculator">Use Price Calculator</a>
+  </div>
+
+  <p class="form-fineprint">
+    Submitting this form does not create an appointment. We’ll confirm details and availability.
+  </p>
+</form>
       </div>
 
       <!-- RIGHT: INFO / QUICK CONTACT -->
@@ -217,6 +235,8 @@
   </section>
 
   <footer class="site-footer">
+    <p>info@tgservices.us</p>
+    <p>(443)928-3652</p>
     <p>© 2023 TG Services</p>
   </footer>
 
@@ -240,6 +260,7 @@
   </script>
 </body>
 </html>
+
 
 
 
