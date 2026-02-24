@@ -1097,7 +1097,41 @@ body.contact-page{
   line-height: 1.5;
   color:#444;
 }
+/* ===== CHECK GROUP (CONTACT FORM) ===== */
 
+.check-group{
+  display: grid;
+  gap: 10px;
+}
+
+.check-option{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px;
+  border-radius:14px;
+  border:1px solid rgba(0,0,0,.06);
+  background: rgba(255,255,255,.62);
+  cursor:pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.check-option:hover{
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.08);
+}
+
+.check-option input{
+  width:18px;
+  height:18px;
+  accent-color:#2c3b2d;
+}
+
+.check-option span{
+  flex:1;
+  color:#333;
+  font-weight:500;
+}
 /* =========================
    RESPONSIVE
    ========================= */
@@ -1200,6 +1234,7 @@ body.contact-page{
   /* Pricing hub (two tables) stacking */
   .pricing-panels{ grid-template-columns: 1fr; }
 }
+
 
 
 
