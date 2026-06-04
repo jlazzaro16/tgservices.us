@@ -297,61 +297,43 @@
 
   const fmt = (n) => n.toLocaleString("en-US", { style: "currency", currency: "USD" });
 
-function recalc() {
-  const sqftVal = parseInt(document.getElementById("sqftRange").value, 10);
-  const base = sqftVal ? (BASE_PRICES[sqftVal] || 0) : 0;
+  function recalc() {
+    const sqftVal = parseInt(document.getElementById("sqftRange").value, 10) || 0;
+    const base = sqftVal ? (BASE_PRICES[sqftVal] || 0) : 0;
 
-  let addonsTotal = 0;
+    let addonsTotal = 0;
 
-  document.querySelectorAll('.calc-check input[type="checkbox"]').forEach(cb => {
-    if (!cb.checked) return;
+    const packageAChecked = document.querySelector('[data-addon="PackageA"]').checked;
+    const packageBChecked = document.querySelector('[data-addon="PackageB"]').checked;
 
-    const key = cb.dataset.addon;
-
-    // Package A
-    if (key === "PackageA") {
-
+    // Calculate New Construction Packages
+    if (packageAChecked) {
       const foundation = sqftVal < 2500 ? 250 : 300;
-      const drywall = sqftVal < 2500 ? 350 : 425;
-
-      const packageATotal =
-        (foundation + drywall + base + base) * 0.85;
-
+      const preDrywall = sqftVal < 2500 ? 350 : 425;
+      const finalWalkthrough = base;
+      const elevenMonth = base;
+      const packageATotal = (foundation + preDrywall + finalWalkthrough + elevenMonth) * 0.85;
       addonsTotal += packageATotal;
-    }
-
-    // Package B
-    else if (key === "PackageB") {
-
+    } else if (packageBChecked) {
       const foundation = sqftVal < 2500 ? 250 : 300;
-      const drywall = sqftVal < 2500 ? 350 : 425;
-
-      const packageBTotal =
-        (foundation + drywall + base) * 0.90;
-
+      const preDrywall = sqftVal < 2500 ? 350 : 425;
+      const finalWalkthrough = base;
+      const packageBTotal = (foundation + preDrywall + finalWalkthrough) * 0.90;
       addonsTotal += packageBTotal;
+    } else {
+      // No packages, just sum regular add-ons
+      document.querySelectorAll('.calc-check input[type="checkbox"]').forEach(cb => {
+        if (cb.checked) {
+          const key = cb.dataset.addon;
+          if (!(key === "PackageA" || key === "PackageB")) {
+            addonsTotal += ADDONS[key] || 0;
+          }
+        }
+      });
     }
 
-    // Regular add-ons
-    else {
-      addonsTotal += (ADDONS[key] || 0);
-    }
-  });
-
-  const total = base + addonsTotal;
-
-  document.getElementById("basePrice").textContent =
-    sqftVal ? fmt(base) : "$—";
-
-  document.getElementById("addonsPrice").textContent =
-    sqftVal ? fmt(addonsTotal) : "$—";
-
-  document.getElementById("totalPrice").textContent =
-    sqftVal ? fmt(total) : "$—";
-}
-    });
-
-    const total = base + addonsTotal;
+    // Total price
+    const total = (packageAChecked || packageBChecked) ? addonsTotal : base + addonsTotal;
 
     document.getElementById("basePrice").textContent = sqftVal ? fmt(base) : "$—";
     document.getElementById("addonsPrice").textContent = sqftVal ? fmt(addonsTotal) : "$—";
