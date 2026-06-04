@@ -141,13 +141,19 @@
 
         <div class="calc-divider"></div>
 
+        <div class="calc-label">New Construction</div>
+        <div class="calc-checks">
+           <label class="calc-check"><input type="checkbox" data-addon="PackageA"><span>Package A</span></label>
+           <label class="calc-check"><input type="checkbox" data-addon="PackageB"><span>Package B</span></label>
+        <div class="calc-divider"></div>
+
         <div class="calc-label">Add-ons</div>
         <div class="calc-checks">
           <label class="calc-check"><input type="checkbox" data-addon="structure"><span>Additional Structure</span><em>+$75</em></label>
           <label class="calc-check"><input type="checkbox" data-addon="radon"><span>Radon</span><em>+$125</em></label>
           <label class="calc-check"><input type="checkbox" data-addon="sewer"><span>Sewer Scope</span><em>+$150</em></label>
           <label class="calc-check"><input type="checkbox" data-addon="water"><span>Well / Water Testing</span><em>+$150</em></label>
-          <label class="calc-check"><input type="checkbox" data-addon="moldAir"><span>Mold (Full / Air Quality)</span><em>+$300</em></label>
+          <label class="calc-check"><input type="checkbox" data-addon="moldAir"><span>Mold (Full / Air Quality)</span><em>+$250</em></label>
         </div>
 
         <p class="calc-note">* Additional structures may vary. Homes above 5000 sq ft or unique properties may require confirmation.</p>
@@ -236,12 +242,12 @@
   </tr>
   <tr>
     <td>Discount Package A (All)</td>
-    <td>$1,150 - $1,650</td>
+    <td>Save 15% Off Total</td>
     <td>Save 15% Off Total</td>
   </tr>
   <tr>
     <td>Discount Package B (No 11-Month)</td>
-    <td>$880 - $1,150</td>
+    <td>Save 10% Off Total</td>
     <td>Save 10% Off Total</td>
   </tr>
 </tbody>
@@ -283,7 +289,7 @@
 
   const ADDONS = {
     radon: 125,
-    moldAir: 300,
+    moldAir: 250,
     sewer: 150,
     water: 150,
     structure: 75
