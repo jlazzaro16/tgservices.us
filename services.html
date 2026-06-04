@@ -297,16 +297,58 @@
 
   const fmt = (n) => n.toLocaleString("en-US", { style: "currency", currency: "USD" });
 
-  function recalc(){
-    const sqftVal = document.getElementById("sqftRange").value;
-    const base = sqftVal ? (BASE_PRICES[parseInt(sqftVal, 10)] || 0) : 0;
+function recalc() {
+  const sqftVal = parseInt(document.getElementById("sqftRange").value, 10);
+  const base = sqftVal ? (BASE_PRICES[sqftVal] || 0) : 0;
 
-    let addonsTotal = 0;
-    document.querySelectorAll('.calc-check input[type="checkbox"]').forEach(cb => {
-      if (cb.checked){
-        const key = cb.getAttribute("data-addon");
-        addonsTotal += (ADDONS[key] || 0);
-      }
+  let addonsTotal = 0;
+
+  document.querySelectorAll('.calc-check input[type="checkbox"]').forEach(cb => {
+    if (!cb.checked) return;
+
+    const key = cb.dataset.addon;
+
+    // Package A
+    if (key === "PackageA") {
+
+      const foundation = sqftVal < 2500 ? 250 : 300;
+      const drywall = sqftVal < 2500 ? 350 : 425;
+
+      const packageATotal =
+        (foundation + drywall + base + base) * 0.85;
+
+      addonsTotal += packageATotal;
+    }
+
+    // Package B
+    else if (key === "PackageB") {
+
+      const foundation = sqftVal < 2500 ? 250 : 300;
+      const drywall = sqftVal < 2500 ? 350 : 425;
+
+      const packageBTotal =
+        (foundation + drywall + base) * 0.90;
+
+      addonsTotal += packageBTotal;
+    }
+
+    // Regular add-ons
+    else {
+      addonsTotal += (ADDONS[key] || 0);
+    }
+  });
+
+  const total = base + addonsTotal;
+
+  document.getElementById("basePrice").textContent =
+    sqftVal ? fmt(base) : "$—";
+
+  document.getElementById("addonsPrice").textContent =
+    sqftVal ? fmt(addonsTotal) : "$—";
+
+  document.getElementById("totalPrice").textContent =
+    sqftVal ? fmt(total) : "$—";
+}
     });
 
     const total = base + addonsTotal;
