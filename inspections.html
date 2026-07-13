@@ -87,7 +87,7 @@
 
     <div class="pricing-head">
       <h2>Pricing</h2>
-      <p>Transparent pricing for add-ons and new build phase inspections.</p>
+      <p>Transparent pricing for new build phase inspections.</p>
     </div>
 
     <div class="pricing-panels">
@@ -97,21 +97,6 @@
           <h3>Add-On Pricing</h3>
           <span class="panel-sub">Optional services</span>
         </div>
-
-        <table class="pricing-table">
-          <thead>
-            <tr><th>Inspection</th><th>Price w/ Inspection</th><th>Price w/o Inspection</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Radon</td><td>$125</td><td>$200</td></tr>
-            <tr><td>Mold (Limited)</td><td><i>2 Swabs Included</i></td><td>$250</td></tr>
-            <tr><td>Mold (Complete/Air Quality)</td><td>$250</td><td>$600</td></tr>
-            <tr><td>Sewer Scope Inspection</td><td>$150</td><td>$200</td></tr>
-            <tr><td>Well/Water Testing</td><td>$150</td><td>$225</td></tr>
-            <tr><td>Additional Structure</td><td>$75+</td><td>N/A</td></tr>
-          </tbody>
-        </table>
-      </div>
 
       <!-- New Build / Phase Inspections -->
       <div class="price-panel">
@@ -236,11 +221,6 @@
         <div class="calc-label">Add-ons</div>
         <div class="calc-checks">
           <label class="calc-check"><input type="checkbox" data-addon="structure"><span>Additional Structure</span><em>+$75</em></label>
-          <label class="calc-check"><input type="checkbox" data-addon="radon"><span>Radon</span><em>+$125</em></label>
-          <label class="calc-check"><input type="checkbox" data-addon="sewer"><span>Sewer Scope</span><em>+$150</em></label>
-          <label class="calc-check"><input type="checkbox" data-addon="water"><span>Well / Water Testing</span><em>+$150</em></label>
-          <label class="calc-check"><input type="checkbox" data-addon="moldAir"><span>Mold (Full / Air Quality)</span><em>+$250</em></label>
-        </div>
 
         <p class="calc-note">* Additional structures may vary. Homes above 5000 sq ft or unique properties may require confirmation.</p>
       </div>
@@ -277,22 +257,18 @@
 </script>
 <script>
   const BASE_PRICES = {
-    1000: 400, 1100:410, 1200: 425, 1300: 440, 1400: 455,
-    1500: 470, 1600: 485, 1700: 500, 1800: 515, 1900: 530,
-    2000: 540, 2100: 550, 2200: 560, 2300: 570, 2400: 580,
-    2500: 590, 2600: 600, 2700: 610, 2800: 620, 2900: 630,
-    3000: 640, 3100: 650, 3200: 660, 3300: 670, 3400: 680,
-    3500: 690, 3600: 700, 3700: 710, 3800: 720, 3900: 730,
-    4000: 740, 4100: 750, 4200: 760, 4300: 770, 4400: 780,
-    4500: 790, 4600: 800, 4700: 810, 4800: 820, 4900: 830,
-    5000: 850
+    1000: 350, 1100: 365, 1200: 380, 1300: 395, 1400: 410,
+    1500: 425, 1600: 440, 1700: 455, 1800: 470, 1900: 485,
+    2000: 500, 2100: 515, 2200: 530, 2300: 545, 2400: 560,
+    2500: 575, 2600: 590, 2700: 605, 2800: 620, 2900: 635,
+    3000: 650, 3100: 665, 3200: 680, 3300: 695, 3400: 710,
+    3500: 725, 3600: 740, 3700: 755, 3800: 770, 3900: 785,
+    4000: 800, 4100: 815, 4200: 830, 4300: 845, 4400: 860,
+    4500: 875, 4600: 890, 4700: 905, 4800: 920, 4900: 935,
+    5000: 950
   };
 
   const ADDONS = {
-    radon: 125,
-    moldAir: 250,
-    sewer: 150,
-    water: 150,
     structure: 75
   };
 
