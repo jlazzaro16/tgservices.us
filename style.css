@@ -1086,7 +1086,18 @@ body.contact-page{
 @media (max-width: 768px){
 
   body{ padding-top: 80px; }
+.hero-buttons{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  align-items:flex-start;
+}
 
+.hero-buttons a{
+  margin-right:0;
+  width:100%;
+  max-width:280px;
+}
   .nav-container{ padding: 16px 20px; }
 
   .menu-toggle{ display: block; }
