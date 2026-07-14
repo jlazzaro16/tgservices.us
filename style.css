@@ -57,7 +57,7 @@ body{
   font-weight:500;
 }
 
-
+#navMenu .nav-button:hover{ background:#1e2a20; }
 #navMenu .nav-button{
   background:#2c3b2d;
   color:white;
