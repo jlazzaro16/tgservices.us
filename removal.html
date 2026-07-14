@@ -174,5 +174,17 @@
     (443)928-3652<br>
     © 2022 TG Services</p>
   </footer>
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("menuToggle");
+    const menu = document.getElementById("navMenu");
+
+    if (!toggleBtn || !menu) return;
+
+    toggleBtn.addEventListener("click", () => {
+      menu.classList.toggle("open");
+    });
+  });
+</script>
 </body>
 </html>
