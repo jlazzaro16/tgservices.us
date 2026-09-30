@@ -77,6 +77,7 @@
           <li>Radon, mold</li>
           <li>Sewer scope, water testing</li>
           <li>New Construction Inspections</li>
+          <li>Pre-listing inspection</l>
         </ul>
       </div>
 
@@ -154,6 +155,8 @@
         <div class="calc-label">Add-ons</div>
         <div class="calc-checks">
           <label class="calc-check"><input type="checkbox" data-addon="structure"><span>Additional Structure</span><em>+$75</em></label>
+          <label class="calc-check"><input type="checkbox" data-addon="prelist"><span>Pre-lisitng Inspection</span><em>$200</em></label>
+
         </div>
         <p class="calc-note">* Additional structures may vary. Homes above 5000 sq ft or unique properties may require confirmation.</p>
       </div>
@@ -270,7 +273,8 @@
   };
 
   const ADDONS = {
-    structure: 75
+    structure: 75,
+    prelist: 200
   };
 
   const fmt = (n) => n.toLocaleString("en-US", { style: "currency", currency: "USD" });
